@@ -4,6 +4,6 @@ import java.util.Map;
 
 public interface IUserService {
 
-    public Map<String, Object> searchUser(String userName, String );
+    public Map<String, Object> searchUser(String userName, String pwd);
 
 }

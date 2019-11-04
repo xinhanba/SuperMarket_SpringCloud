@@ -14,7 +14,7 @@ public class UserClientController {
     @Resource
     private IUserService userService;
 
-    @GetMapping(value = "/login")
+    @GetMapping(value = "/getUser")
     public String getUser(String id, String name) {
         String str = "id:" + id + ", name=" + name + ", 1";
         System.out.println(str);

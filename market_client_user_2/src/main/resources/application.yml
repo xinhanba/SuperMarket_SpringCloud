@@ -17,7 +17,6 @@ eureka:
 logging:
   config: classpath:logback-spring.xml
 
-
 info:
   app.name: client-8782
   company.name: www.hyz.com
