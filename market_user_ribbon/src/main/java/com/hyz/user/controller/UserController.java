@@ -1,5 +1,6 @@
 package com.hyz.user.controller;
 
+import com.hyz.user.domain.entity.ConsumerUser;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,20 +22,18 @@ public class UserController {
     @GetMapping(name = "ribbon")
     public String main() {
 
-
-
         ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client-user");
 
         System.out.println("----" + serviceInstance.getHost() + ",=====" + serviceInstance.getPort());
 
-
-        String url = "http://eureka-client-user/user/getUser?id={id}&name={name}";
+        String url = "http://eureka-client-user/user/getUser?email={email}&pwd={pwd}";
 
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("id", "123");
-        params.put("name", "hyz");
+        params.put("email", "517491659@qq.com");
+        params.put("pwd", "123456");
 
-        return restTemplate.getForObject(url, String.class, params);
+        ConsumerUser consumerUser = restTemplate.getForObject(url, ConsumerUser.class, params);
+        return consumerUser.getF_user_email() + ", " + consumerUser.getF_user_pwd();
     }
 
 }

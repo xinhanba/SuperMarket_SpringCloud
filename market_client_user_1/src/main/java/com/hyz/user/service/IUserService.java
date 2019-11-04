@@ -1,9 +1,10 @@
 package com.hyz.user.service;
 
-import java.util.Map;
+import com.hyz.user.domain.entity.ConsumerUser;
+import com.hyz.user.exception.ServiceException;
 
 public interface IUserService {
 
-    public Map<String, Object> searchUser(String userName, String pwd);
+    public ConsumerUser searchUser(String userName, String pwd) throws ServiceException;
 
 }

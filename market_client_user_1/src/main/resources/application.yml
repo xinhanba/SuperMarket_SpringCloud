@@ -6,7 +6,7 @@ spring:
   datasource:
     name: user
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/Consumer?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/user?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 123456
   #jsp前后缀
@@ -42,4 +42,4 @@ info:
 
 mybatis:
   mapper-locations: classpath:mappers/*.xml
-  type-aliases-package: com.tjhq.shop.domain.entity
+  type-aliases-package: com.hyz.user.domain.entity

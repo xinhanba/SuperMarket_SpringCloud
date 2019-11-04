@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hyz.user.domain.dao.IUserDao">
+
+    <select id="checkUserEmail" parameterType="java.lang.String" resultType="ConsumerUser">
+		SELECT * FROM f_consumer_user t where t.f_user_email = #{userEmail}
+	</select>
+
+</mapper>
