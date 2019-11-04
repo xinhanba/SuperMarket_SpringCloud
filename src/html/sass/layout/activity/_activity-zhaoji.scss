@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* 英雄召集令 */
+
+.hd-zhaoji-bg {
+  background: #171960 url(../images/activity/activity-bg1.jpg) repeat-x center top;
+  padding-bottom: 100px;
+}
+
+.hd-zhaoji-block {
+  padding: 700px 0 0 0;
+}
+
+.row-block {
+  margin-bottom: 25px;
+  overflow: $hd;
+}
+
+.row-block-title {
+  width: 110px;
+  height: 104px;
+  &.hdnr {
+    background: url(../images/activity/hdnr.png) no-repeat;
+  }
+  &.hdsm {
+    background: url(../images/activity/hdsm.png) no-repeat;
+  }
+}
+
+.row-block-main {
+  color: $white;
+  width: 830px;
+  font-size: 14px;
+  padding: 25px 20px;
+  background: #163387;
+  border-bottom: 4px solid #0e2569;
+  line-height: 1.8em;
+  p {
+    text-indent: 2em;
+  }
+  ol {
+    list-style: decimal inside;
+  }
+}
+
+.link-btn-zj {
+  font-size: 24px;
+  font-weight: 100;
+  background: #3f881f;
+  padding: 15px 40px;
+  text-shadow: 0 2px 3px #444;
+  border-bottom: 4px solid #1d5107;
+  &:hover {
+    @extend %opacity;
+  }
+}

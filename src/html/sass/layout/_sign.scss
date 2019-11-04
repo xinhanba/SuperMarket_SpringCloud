@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+.email-select {
+  position: relative;
+}
+
+.auto-tip {
+  height: auto;
+  background: $white;
+  top: 65px !important;
+}
+
+.auto-tip li {
+  text-align: $lt;
+  padding: 3px 10px;
+  font-size: 14px;
+}
+
+.auto-tip li.hoverBg {
+  background: $tr-hover;
+  cursor: pointer;
+}
+
+.auto-tip li em {
+  font-style: normal;
+}
+
+.red {
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 注册页面样式 */
+
+.sign-wrap {
+  padding: 60px 30px;
+  @extend %data-wrap;
+  margin: 80px auto;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: $ct;
+  }
+}
+
+.sign-lt {
+  width: 46%;
+}
+
+.sign-rt {
+  width: 46%;
+  ul {
+    width: 100%;
+    overflow: $hd;
+    li {
+      *width: 100%;
+      overflow: $hd;
+      margin-bottom: 20px;
+      span {
+        width: 35px;
+        height: 35px;
+        display: block;
+        float: $lt;
+        margin-top: 5px;
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+      .text {
+        overflow: $hd;
+        float: $lt;
+        h4 {
+          color: $body-color;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+        em {
+          font-size: 12px;
+          color: #6a6a6a;
+        }
+      }
+    }
+  }
+}
+
+.input-btn {
+  @include public-wrap;
+  p {
+    margin-top: 10px;
+    a {
+      color: $link-color;
+      &:hover {
+        color: $a-hover;
+      }
+    }
+  }
+  // .sub-btn {
+  //   width:30%!important;
+  //   margin:0 auto;
+  //   font-weight:normal;
+  //   font-size:14px;
+  // }
+}
+
+.login-box {
+  width: 380px;
+  margin: 80px auto;
+  @extend %box-shadow, %border-radius;
+  padding: 50px;
+}
+
+.shadow {
+  width: 88%;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: $hd;
+  @extend %box-shadow, %border-radius;
+}

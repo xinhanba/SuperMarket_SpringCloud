@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@mixin button {
+  @include border-radius;
+  display: $in-bl;
+  text-align: $ct;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    @extend %opacity,%transition;
+    color: $white;
+  }
+  &[type="button"],
+  &[type="submit"],
+  &[type="reset"] {
+    border: none;
+    @extend %font-family;
+  }
+}
+
+%button {
+  @include button;
+}

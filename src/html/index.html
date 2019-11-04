@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>BTC-Q数字货币合约交易平台
+  </title>
+  <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+  <link type="text/css" rel="stylesheet" href="stylesheets/loadingbar.css">
+  <script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/emailAutoComplete.js"></script>
+  <script type="text/javascript" src="js/jquery.loadingbar.js"></script>
+
+  <!--[if lte IE 6]>
+<script src="js/ie6png.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix(' ul, img, li, input , a, div,span,em,i');
+    </script>
+<![endif]-->
+  <script>
+  $(document).ready(function() {
+    $("#clickme").loadingbar({
+      done: function(data) {
+        $.each(data.shots, function(i, item) {
+          // $( "<img/>" ).attr( "src", item.image_teaser_url ).prependTo( $("#frame") );
+          if (i === 11) {
+            return false;
+          }
+        });
+      }
+    });
+  });
+  </script>
+</head>
+
+<body class="index-bg">
+ <!-- 新春对联 -->
+  <div class="container-base">
+    <i class="new-year lt-pic"></i>
+    <i class="new-year rt-pic"></i>
+  </div>
+
+  <!-- top开始 -->
+  <div class="top-wrap">
+    <div class="top clearfix">
+      <div class="top-lt">
+        <a href="trade-index.html">
+          <span>Bitcoin指数：</span><b>$3526.21</b>
+
+        </a>
+      </div>
+      <ul class="top-rt">
+        <li class="menu-control">
+          <strong>zhengzheng@hotmail.com
+            <em class="icons-vip3"></em>
+          </strong>
+          <div class="top-menu">
+            <div class="arrow-top"></div>
+            <ul>
+              <li><b>฿ 55555</b>
+              </li>
+              <li>
+                <a href="user-center.html" class="first">
+                  <span class="icons-safety"></span>账户安全
+                </a>
+              </li>
+              <li>
+                <a href="recharge.html">
+                  <span class="icons-recharge"></span>充值</a>
+              </li>
+              <li>
+                <a href="withdraw.html">
+                  <span class="icons-withdraw"></span>提现</a>
+              </li>
+              <!-- <li>
+                <a href="transfer.html">
+                  <span class="icons-transfer"></span>转账</a>
+              </li> -->
+              <li>
+                <a href="#" style="padding-left:15px;">
+                  <span class="icons-power"></span>退出登录</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- top结束-->
+  <div class="nav-wrap index-nav-bg">
+    <div class="nav clearfix">
+      <div class="nav-lt">
+        <a href="#" class="logo sprites-logo lt">
+        </a>
+        <div class="activity-silde">
+          <ul class="silde-box">
+
+            <li>
+              <a href="activity-zhaoji.html" target="_blank">
+                <img src="images/activity/home-banner2.jpg" alt="BTC-Q会员等级迁移">
+              </a>
+            </li>
+            <!--             <li>
+              <a href="activity-hongbao.html" target="_blank">
+                <img src="images/activity/hongbao.jpg" alt="BTC-Q红包">
+              </a>
+            </li>
+            <li>
+              <a href="activity-zhuanpan.html" target="_blank">
+                <img src="images/activity/home-banner3.jpg" alt="BTC-Q抽奖转盘">
+              </a>
+            </li>
+            <li>
+              <a href="activity-chongzhi.html" target="_blank">
+                <img src="images/activity/home-banner5.jpg" alt="BTC-Q充值抢iphone6">
+              </a>
+            </li> -->
+          </ul>
+          <!-- <div class="silde-control">
+            <span class="current"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div> -->
+        </div>
+      </div>
+      <div class="nav-rt">
+        <ul>
+          <li><a href="index.html" data-datatype="json" data-type="GET" id="clickme">首页</a>
+          </li>
+          <li><a href="trade.html">BTC合约</a>
+          </li>
+          <li><a href="sz-trade.html">SZ合约</a>
+          </li>
+          <li><a href="market.html">行情图表</a>
+          </li>
+          <li><a href="user-center.html">个人中心</a>
+          </li>
+          <li><a href="broker.html">经纪人系统</a> </li>
+          <li><a href="news.html">自助服务</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- banner -->
+  <div class="banner-box">
+    <div class="banner-text">
+      <p>数字货币合约交易平台</p>
+      <b>专业 公正</b>
+    </div>
+    <div class="indx-login">
+      <form action="">
+        <div class="index-input-box clearfix">
+          <div class="form-group1  email-select relative">
+            <label for="">登录邮箱</label>
+            <input type="text" value="" class="form-control inputElem">
+            <i class="icon icons-email email"></i>
+          </div>
+          <div class="form-group1 relative">
+            <label for="">登录密码</label>
+            <input type="password" class="form-control" value="">
+            <i class="icon icons-pwd pwd"></i>
+          </div>
+          <div class="form-group1 last">
+            <button type="submit" class="btn index-sub">确 定</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="login-item">
+          <a href="forgot-password.html">忘记密码？</a>|&nbsp;
+          <a href="sign-in.html">免费注册</a>
+          <span>10秒钟开启您的数字货币合约掘金之路！</span>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- 网站特色 -->
+  <div class="container-row clearfix">
+    <div class="container">
+      <div class="index-block-item clearfix">
+        <i class=" lt index-icon-style sprites-pic"></i>
+        <div class="index-block-txt rt">
+          <h4>最丰富的交易产品选择</h4>
+          <p>我们立志打造全球最专业的数字货币合约交易平台，以促进比特币的深入应用为己任，贴近用户需求，提供最有价值的交易产品。目前提供的交易产品有BTC合约、SZ合约等。
+          </p>
+        </div>
+      </div>
+      <div class="index-block-item clearfix">
+        <i class=" lt index-icon-style sprites-pic1"></i>
+        <div class="index-block-txt rt">
+          <h4>最具科学性的产品设计</h4>
+          <p>传统的BTC合约保留业内通用的“100%保证金爆仓模式”，SZ合约等新型产品承袭传统合约市场优势，采用最科学、最人性化的“余额爆仓模式”，从根本上解决“系统均摊”和“实时结算”的顽症，降低用户交易风险。
+          </p>
+        </div>
+      </div>
+      <div class="index-block-item bdb-none clearfix">
+        <i class=" lt index-icon-style sprites-pic2"></i>
+        <div class="index-block-txt rt">
+          <h4>1到50倍的可选杠杆</h4>
+          <p>1倍、5倍、10倍、20倍、50倍的多种杠杆倍数选择，满足您的不同风险偏好。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--点击展开 -->
+  <div class="container-row show-hide">
+    <div class="main-wrap">
+      <span class="show sprites-toggle" id="show-hide">
+        <em>点击展开</em>
+      </span>
+    </div>
+  </div>
+  <!-- 主体内容,数据表 -->
+  <div class="container-bg-none" id="data-table" style="margin:50px auto;">
+    <div class="main-wrap">
+      <div class="trade-title">
+        <div class="trade-title-lt lt">
+          <span class="icons-hy"></span>
+          <span class="index-title">当前开放合约</span>
+          <em>距离最近合约结算还剩23天5小时6分钟</em>
+        </div>
+        <div class="trade-title-rt rt">
+          <span class="index-title">当前指数：</span><b>6346</b>
+
+        </div>
+      </div>
+      <div class="table-bg index-table">
+        <table cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>合约周期</th>
+              <th>合约名称</th>
+              <th>最新成交价</th>
+              <th>最高价</th>
+              <th>最低价</th>
+              <th>涨跌幅</th>
+              <th>成交量</th>
+              <th>持仓量</th>
+              <th>增仓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2014年7月</td>
+              <td>BTC1407</td>
+              <td>3500</td>
+              <td>3650</td>
+              <td>3400</td>
+              <td class="buy">+1.25%</td>
+              <td>164641</td>
+              <td>416161631631</td>
+              <td>+6161615</td>
+            </tr>
+            <tr>
+              <td>2014年7月</td>
+              <td>BTC1407</td>
+              <td>3500</td>
+              <td>3650</td>
+              <td>3400</td>
+              <td class="sell">-1.25%</td>
+              <td>164641</td>
+              <td>416161631631</td>
+              <td>+6161615</td>
+            </tr>
+            <tr>
+              <td>2014年7月</td>
+              <td>BTC1407</td>
+              <td>3500</td>
+              <td>3650</td>
+              <td>3400</td>
+              <td class="buy">+1.25%</td>
+              <td>164641</td>
+              <td>416161631631</td>
+              <td>+6161615</td>
+            </tr>
+            <tr>
+              <td>2014年7月</td>
+              <td>BTC1407</td>
+              <td>3500</td>
+              <td>3650</td>
+              <td>3400</td>
+              <td class="buy">+1.25%</td>
+              <td>164641</td>
+              <td>416161631631</td>
+              <td>+6161615</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="main-wrap">
+      <div class="index-data-title">
+        <span class="current">BTC1407</span>
+        <span>BTC1408</span>
+        <span>BTC1409</span>
+        <span>BTC1502</span>
+        <a href="trade-data.html">更多>></a>
+      </div>
+      <div class="clear"></div>
+      <div class="index-trade-lt lt">
+        <h3>市场挂单</h3>
+        <div class="table-bg index-trade-box">
+          <table cellpadding="0" cellspacing="0" class="lt">
+            <thead>
+              <tr>
+
+                <th>累计</th>
+                <th>数量</th>
+                <th>买价</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td>5BTC</td>
+                <td>1BTC</td>
+                <td class="buy">5247</td>
+              </tr>
+            </tbody>
+          </table>
+          <table cellpadding="0" cellspacing="0" class="lt">
+            <thead>
+              <tr>
+
+                <th>卖价</th>
+                <th>数量</th>
+                <th>累计</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td class="sell">5247</td>
+                <td>1BTC</td>
+                <td>5BTC</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="table-bg index-trade-box1 rt">
+        <h3>成交记录</h3>
+        <table cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>成交价</th>
+              <th>成交量</th>
+              <th>增仓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+
+              <td>08-01 13:25</td>
+              <td>5201</td>
+              <td>5247</td>
+              <td>-5247</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!-- 公告资讯 -->
+  <div class="container-row">
+    <div class="index-news-wrap clearfix">
+      <div class="index-news-lt lt">
+        <h3>
+          <span class="icons-zx"></span><a href="">公告资讯</a>
+        </h3>
+        <ul class="news-list-block">
+          <li>
+            <div class="new-title">
+              <a href="">BTC100关于无限期下线比特币交易借贷产品的公告</a>
+              <span>2014-08-06</span>
+            </div>
+            <p>BTC100无论面临怎样严峻的国内政策环境，我们一直坚持最初的梦想，一直坚持为大家提供纯粹的比特币交易平台，只为大家“看场子”，不参与交易</p>
+          </li>
+          <li>
+            <div class="new-title">
+              <a href="">BTC100关于无限期下线比特币交易借贷产品的公告</a>
+              <span>2014-08-06</span>
+            </div>
+            <p>BTC100无论面临怎样严峻的国内政策环境，我们一直坚持最初的梦想，一直坚持为大家提供纯粹的比特币交易平台，只为大家“看场子”，不参与交易</p>
+          </li>
+          <li>
+            <div class="new-title">
+              <a href="">BTC100关于无限期下线比特币交易借贷产品的公告</a>
+              <span>2014-08-06</span>
+            </div>
+            <p>BTC100无论面临怎样严峻的国内政策环境，我们一直坚持最初的梦想，一直坚持为大家提供纯粹的比特币交易平台，只为大家“看场子”，不参与交易</p>
+          </li>
+        </ul>
+      </div>
+      <div class="index-news-rt rt">
+        <h3>
+          <span class="icons-product"></span><a href="">上市产品</a>
+        </h3>
+        <ul class="news-list-block">
+          <li>
+            <div class="new-title">
+              <a href="btc-contract.html?type=1" id="btc-conter">BTC合约简介</a>
+            </div>
+            <p>BTC-Q比特币合约：指由BTC-Q数字货币合约交易平台所制订的一种标准化比特币交易协议。协议中规定了持有用户可以在将来某一天以特定的价格通过比特币来结算价差的方式进行交割。例如：BTC1408，是指将在2014年8月底进行交割的比特币合约。</p>
+          </li>
+          <li>
+            <div class="new-title">
+              <a href="sz-contract.html?type=1">SZ合约简介</a>
+            </div>
+            <p>SZ是“上证”首拼音的简称，SZ合约是指用比特币作为交易保证金，把上证指数作为交易标的而设计出来的一种迷你的虚拟上证指数合约。这是BTC-Q数字货币合约交易平台在业内的一次重大创新，虚拟与现实的结合将比特币的应用真正推向深入，必将促进比特币应用的大发展。</p>
+          </li>
+          <li>
+            <div class="new-title">
+              <a href="">BTC100关于无限期下线比特币交易借贷产品的公告</a>
+
+            </div>
+            <p>BTC100无论面临怎样严峻的国内政策环境，我们一直坚持最初的梦想，一直坚持为大家提供纯粹的比特币交易平台，只为大家“看场子”，不参与交易</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 友情链接 -->
+  <div class="container-bg-none links-mb">
+    <div class="links">
+      <b>友情链接：</b>
+      <ul>
+        <li><a href="">币看网</a>
+        </li>
+        <li><a href="">比特币资讯网</a>
+        </li>
+        <li><a href="">BTC100</a>
+        </li>
+        <li><a href="">币看网</a>
+        </li>
+        <li><a href="">比特币资讯网</a>
+        </li>
+        <li><a href="">BTC100</a>
+        </li>
+        <li><a href="">币看网</a>
+        </li>
+        <li><a href="">比特币资讯网</a>
+        </li>
+        <li><a href="">BTC100</a>
+        </li>
+        <li><a href="">币看网</a>
+        </li>
+        <li><a href="">比特币资讯网</a>
+        </li>
+        <li><a href="">BTC100</a>
+        </li>
+        <li><a href="">币看网</a>
+        </li>
+        <li><a href="">比特币资讯网</a>
+        </li>
+        <li><a href="">BTC100</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- 底部footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row lt">
+        <h2>关于我们</h2>
+        <ul>
+          <li><a href="#">关于我们</a>
+          </li>
+          <li><a href="#">服务协议</a>
+          </li>
+          <li><a href="#">收费规则</a>
+          </li>
+          <li><a href="#">联系我们</a>
+          </li>
+
+          <li><a href="feedback.html">投诉建议</a>
+          </li>
+        </ul>
+      </div>
+      <div class="row lt">
+        <h2>上市产品</h2>
+        <ul>
+          <li><a href="#">名词解释</a>
+          </li>
+          <li><a href="#">交易规则</a>
+          </li>
+          <li><a href="#">风险控制</a>
+          </li>
+          <li><a href="#">其它</a>
+          </li>
+        </ul>
+      </div>
+      <div class="row1 lt">
+        <h2>联系我们</h2>
+
+        <p><b>BTC-Q数字货币合约交易平台平台</b>
+        </p>
+        <p>开发：Bit Technology Group Co., LTD（英国）</p>
+        <p>运营：郑州比特科技有限公司（中国）</p>
+        <p>24小时服务热线：<b>400-88-94100</b>
+        </p>
+        <p>地址：中国·郑州·高新区冬青街26号电子商务产业园4#211</p>
+        <p>服务邮箱：btc-q@btc-q.com
+        </p>
+        <p>业务合作：0371-55031576</p>
+
+
+      </div>
+      <div class="row2 rt">
+        <h2>风险提示</h2>
+
+        <p>数字货币行业是一个新兴产业，存在光明前景，但正因为属于新事物，也蕴含巨大风险。特别是在期货杠杆交易中，杠杆倍数既同步扩大了盈利也同步放大了风险，请您务必对此行业、杠杆交易模式、交易规则等相关知识有充分了解后再参与。并且我们强烈建议您，在自身能够承担的风险范围内进行交易。</p>
+        <p>
+          <em style="font-size:14px;color:#3079bd;font-weight:700;">买卖有风险，入市须谨慎！</em>
+        </p>
+        <div class="weixin">
+          <span id="close-weixin" class="icons-close"></span>
+          <img src="images/btc-q-weixin.jpg" alt="BTC-Q官方微信">
+        </div>
+        <p class="cont">
+
+          <a href="javascript:" id="weixin">
+            <span class="icons-wx"></span>关注微信</a>
+          <a href="http://weibo.com/btcqihuo" rel="nofollow" target="_blank">
+            <span class="icons-wb"></span>官方微博</a>
+          <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800088161&ref=&f=1&ty=1&ap=&as=" rel="nofollow" target="_blank">
+            <span class="icons-qq"></span>QQ交谈</a>
+        </p>
+        <div class="clear"></div>
+        <p>官方群：
+          <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=d8af779649248fb1526d591391818ddd1217353bba25c2d7061213281140be2a" rel="nofollow">
+            <img border="0" src="images/group.png" alt="BTC-Q" title="BTC-Q" style="vertical-align:middle;">
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- copyright
+ -->
+  <div class="container-bg-none">
+    <div class="copyright">
+      <p>
+
+        <span>Copyright:2014 All Rights Reserved to Bit Technology Group Co., Ltd(British company No:09038141)</span>
+        <span class="rt"><a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">豫ICP备13012590号-4</a>
+        </span>
+      </p>
+    </div>
+  </div>
+  <!-- 这里是客服代码 -->
+  <div class="service-box">
+    <div class="service-wrap">
+      <div class="kefu-icon service-icon sprites-service" id="service-icon"></div>
+      <div class="service-main" id="service-main">
+        <div class="se-block" id="se-title">
+          <span class="kefu-icon title-icon sprites-service"></span>收起 >></div>
+        <div class="se-list">
+          <span class="icons-se-qq"></span><a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800088161&ref=&f=1&ty=1&ap=&as=" rel="nofollow" target="_blank">800088161</a>
+        </div>
+        <div class="se-list">
+          <span class="icons-se-tel"></span>400-88-94100</div>
+
+        <div class="se-list">
+          <span class="icons-wb1"></span><a href="http://weibo.com/btcqihuo" rel="nofollow" target="_blank">新浪微博</a>
+        </div>
+        <div class="se-list">
+          <span class="icons-wx1"></span><a href="javascript:" target="_blank" id="wx1">关注微信</a>
+          <img src="images/btc-q-weixin.jpg" width="120px" height="120px" alt="BTC-Q官方微信" style="display:none;" id="wx-img">
+        </div>
+        <div class="se-list">
+          <span class="icons-info"></span><a href="feedback.html" target="_blank">提交反馈</a>
+        </div>
+        <div class="se-list" style="text-align:center;padding-top:15px;">
+          <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=d8af779649248fb1526d591391818ddd1217353bba25c2d7061213281140be2a" rel="nofollow">
+            <img border="0" src="images/group.png" alt="BTC-Q" title="BTC-Q" style="vertical-align:middle;">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  $(function() {
+
+
+
+    // 表格隔行换色
+    $(".table-bg table tr:odd").css("background", "#fff");
+    $(".table-bg table tr:even").css("background", "#fafafa");
+
+    // 市场行情下拉菜单
+    $("#data-table").hide();
+    $("#show-hide").toggle(function() {
+      $("#show-hide em").text("点击隐藏");
+      $("#data-table").slideDown(500);
+    }, function() {
+      $("#data-table").slideUp(500);
+      $("#show-hide em").text("点击展开");
+    });
+    // 登录后顶部菜单
+    $(".menu-control").mouseover(function() {
+      // 鼠标移动到.menu-control菜单显示，鼠标从菜单上移开，菜单消失
+      $(".top-menu").show().mouseleave(function() {
+        $(this).hide();
+      });
+    });
+    $(".menu-control").mouseout(function() {
+      // 鼠标从.menu-control移开，菜单消失
+      $(".top-menu").hide();
+    });
+    // 点击微信弹出二维码
+    $("#weixin").click(function(event) {
+      $(".weixin").show();
+      $("#close-weixin").click(function() {
+        $(".weixin").hide();
+      });
+    });
+    // 客服
+    $("#service-icon").click(function() {
+      $(this).hide(100);
+      $("#service-main").stop().animate({
+        right: "0"
+      }, 450);
+      $("#se-title").click(function() {
+        $("#service-main").stop().animate({
+          right: "-180"
+        }, 450);
+        $("#service-icon").show("slow");
+      });
+      $("#wx1").toggle(function() {
+        $("#wx-img").show();
+      }, function() {
+        $("#wx-img").hide();
+      });
+    });
+
+  });
+  </script>
+  <script type="text/javascript" language="javascript">
+  var PicTotal = 3; // 当前图片总数
+  var CurrentIndex; // 当前鼠标点击图片索引
+  var ToDisplayPicNumber = 0; // 自动播放时的图片索引
+
+  $(".silde-control span").click(DisplayPic);
+
+  function DisplayPic() {
+    // 测试是父亲的第几个儿子
+    CurrentIndex = $(this).index();
+    // 删除所有同级兄弟的类属性
+    $(this).parent().children().removeClass("current")
+      // 为当前元素添加类
+    $(this).addClass("current");
+    // 隐藏全部图片
+    var Pic = $(this).parent().parent().children("ul");
+    $(Pic).children().hide();
+    // 显示指定图片
+    $(Pic).children("li").eq(CurrentIndex).show();
+
+  }
+
+  function PicNumClick() {
+    $(".silde-control span").eq(ToDisplayPicNumber).trigger("click");
+    ToDisplayPicNumber = (ToDisplayPicNumber + 1) % PicTotal;
+    setTimeout("PicNumClick()", 4000);
+  }
+  setTimeout("PicNumClick()", 4000);
+  </script>
+
+</body>
+
+
+
+</html>

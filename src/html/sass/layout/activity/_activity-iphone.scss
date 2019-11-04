@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+/* 公测抢iPhone6活动 */
+
+.hd-top-bg {
+  background: #001c43 url(../images/activity/hd-top-bg.jpg) no-repeat $ct top;
+}
+
+.hd-end-bg {
+  background: #001c43 url(../images/activity/hd-end.jpg) no-repeat $ct top;
+}
+
+.hd-container {
+  width: 100%;
+  padding-bottom: 180px;
+  background: url(../images/activity/hd-footer-bg.jpg) no-repeat $ct bottom;
+}
+
+.hd-wrap {
+  width: 1002px;
+  margin: 0 auto;
+  padding-top: 1083px;
+}
+
+.hd-title {
+  widows: 100%;
+  height: 93px;
+  text-align: $ct;
+  background: url(../images/activity/hd-title-bg.png) no-repeat $ct;
+  b {
+    padding-top: 22px;
+    line-height: 1.3em;
+    display: $in-bl;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: $white;
+  }
+}
+
+.hd-main {
+  width: 100%;
+  overflow: $hd;
+  margin: 60px auto;
+}
+
+.rank-box {
+  width: 200px;
+  float: $lt;
+  padding-top: 108px;
+  margin-right: 60px;
+  text-align: $ct;
+  background: url(../images/activity/hd-gift.png) no-repeat $ct top;
+  b {
+    color: #9ecbff;
+    font-size: 18px;
+    display: $in-bl;
+    padding: 15px 0;
+  }
+  p {
+    line-height: 1.3em;
+    color: #3770b3;
+  }
+}
+
+.hd-btn {
+  text-align: $ct;
+  margin-bottom: 80px;
+  a {
+    display: $in-bl;
+    width: 244px;
+    height: 58px;
+    background: url(../images/activity/hd-btn.png) no-repeat;
+    &:hover {
+      @extend %opacity;
+    }
+  }
+}
+
+.hd-explain {
+  width: 100%;
+  height: 176px;
+  background: #002b67;
+  margin-bottom: 60px;
+}
+
+.hd-row {
+  widows: 200px;
+  height: 176px;
+  .row-top {
+    height: 88px;
+    line-height: 88px;
+    font-size: 18px;
+    color: $white;
+    text-align: $ct;
+    background: #0056ce;
+  }
+  .row-btm {
+    height: 88px;
+    background: #0049ad;
+    color: #4385df;
+    b {
+      margin: 0 auto;
+      padding-top: 25px;
+      width: 60%;
+      display: $bl;
+    }
+  }
+}
+
+.hd-row1 {
+  width: 147px;
+  height: 176px;
+  background: #00429d;
+  color: #5289d4;
+  p {
+    width: 70%;
+    margin: 45px auto;
+  }
+}
+
+.hd-row2 {
+  width: 655px;
+  height: 176px;
+  color: #4786cf;
+}
+
+%activity-txt {
+  p {
+    width: 100%;
+    overflow: $hd;
+    margin: 10px 0;
+  }
+  b {
+    width: 70px;
+    float: $lt;
+    display: $bl;
+    margin-right: 5px;
+  }
+  .guize {
+    width: 100%;
+    ul {
+      float: $lt;
+      letter-spacing: 0.5px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.row-list {
+  padding-left: 25px;
+  margin: 20px auto;
+  @extend %activity-txt;
+  .guize {
+    ul {
+      width: 555px;
+    }
+  }
+}
+
+.hd-result {
+  width: 100%;
+  overflow: $hd;
+  margin-top: 80px;
+  table {
+    width: 100%;
+    text-align: $ct;
+    color: #95c6ff;
+    th {
+      background: #003681;
+      padding: 15px 0;
+      font-size: 14px;
+    }
+    td {
+      padding: 15px 0;
+      color: #4786cf;
+      &:last-child {
+        text-align: $lt;
+        padding: 0 40px;
+      }
+      span {
+        display: $in-bl;
+        height: 10px;
+        width: 30%;
+        background: #407dc5;
+      }
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.hd-end-wrap {
+  width: 1002px;
+  height: 470px;
+  margin: 0 auto;
+  padding-top: 595px;
+  font-size: 18px;
+  color: $white;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-shadow: 0 1px 0 #000;
+  p {
+    margin-bottom: 15px;
+  }
+  ul {
+    margin-bottom: 15px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/* 二轮公测样式 */
+
+.hd-wrap-two {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 820px;
+}
+
+.hd-container-two {
+  background: #1b283e url(../images/activity/two-bg.jpg) no-repeat $ct top;
+  padding-bottom: 100px;
+}
+
+.hd-link {
+  width: 90%;
+  position: relative;
+  height: 90px;
+  a {
+    position: absolute;
+    left: 225px;
+    top: 5px;
+    display: $bl;
+    width: 130px;
+    height: 45px;
+  }
+}
+
+.two-pm-title {
+  width: 100%;
+  height: 73px;
+  margin: 40px auto;
+  background: url(../images/activity/pm-title.png) no-repeat top $ct;
+}
+
+.hd2-txt {
+  @extend %activity-txt;
+  color: #5590e0;
+  margin-top: 80px;
+  background: url(../images/activity/hd-title.png) no-repeat top $ct;
+  padding: 0 0 0 220px;
+  b {
+    color: #9cc1ff;
+  }
+}
+
+.bug-box-wrap {
+  width: 1000px;
+  height: 128px;
+  background: #1b3b76;
+  overflow: $hd;
+  margin-top: 3px;
+}
+
+.bug-box1, .bug-box2, .bug-box3 {
+  height: 128px;
+  text-align: $ct;
+  float: $lt;
+}
+
+.bug-box1, .bug-box3 {
+  line-height: 128px;
+}
+
+.bug-box1 {
+  color: #9cc1ff;
+  font-size: 24px;
+  width: 333px;
+}
+
+.bug-box2 {
+  color: #607aca;
+  font-size: 14px;
+  background: #234789;
+  width: 320px;
+  line-height: 150%;
+  padding: 20px 40px 0 40px;
+}
+
+.bug-box3 {
+  color: #95abee;
+  font-size: 18px;
+  background: #28509a;
+  width: 267px;
+  a {
+    color: #95abee;
+    font-weight: 700;
+  }
+}
+
+.gift-wrap {
+  width: 1000px;
+  height: 260px;
+  position: relative;
+  a {
+    position: absolute;
+    display: $bl;
+    width: 70px;
+    height: 15px;
+    &.vip1 {
+      top: 86px;
+      left: 462px;
+    }
+    &.vip2 {
+      top: 86px;
+      right: 66px;
+    }
+    &.vip3 {
+      top: 218px;
+      left: 462px;
+    }
+    &.vip4 {
+      top: 218px;
+      right: 66px;
+    }
+  }
+}
+
+.change_btn img.icon {
+  background: url(../images/activity/btn-sina.jpg) no-repeat !important;
+  width: 200px !important;
+  height: 55px !important;
+  display: $bl;
+}

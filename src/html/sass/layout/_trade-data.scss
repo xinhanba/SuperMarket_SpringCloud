@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/* 指数页面样式 */
+
+.price-box {
+  @extend %data-wrap;
+  padding: 10px 0;
+}
+
+.price-box-detail {
+  @extend %public-wrap;
+}
+
+.price-lt {
+  width: 35%;
+  text-align: $ct;
+  b {
+    text-align: $ct;
+    font-size: 60px;
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+    float: $lt;
+  }
+}
+
+.tab-wrap {
+  @extend %public-wrap;
+  position: relative;
+  margin-top: 20px;
+  span {
+    right: 10px;
+    position: absolute;
+  }
+}
+
+.price-rt {
+  font-size: 16px;
+  p {
+    margin-bottom: 25px;
+    span {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+      b {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+/* 行情页面 */
+.market-box {
+  width: 100%;
+  @extend %data-wrap;
+  height: 170px;
+  .price-lt {
+    border-right: 2px solid $white;
+    height: 140px;
+    padding-top: 30px;
+  }
+  .price-rt {
+    width: 64.78%;
+    height: 170px;
+    p {
+      font-size: 14px;
+      &:first-child {
+        border-bottom: 2px solid $white;
+      }
+      height: 84px;
+      line-height: 84px;
+      text-indent: 30px;
+      margin-bottom: 0;
+      overflow: $hd;
+    }
+  }
+}
+
+.market-block {
+  display: $bl;
+  float: $lt;
+  height: 84px;
+  overflow: $hd;
+  width: 33%;
+  border-right: 2px solid $white;
+  margin-right: 0 !important;
+  b {
+    margin-left: 0 !important;
+  }
+}
+
+.market-status {
+  line-height: 35px;
+  padding-left: 20px;
+  span {
+    margin-left: 10px;
+  }
+  b {
+    margin-right: 5px;
+  }
+}
+
+.mrbd {
+  border: none;
+}
+
+.select-tab {
+  width: 100%;
+  overflow: $hd;
+}
+
+.rt-market-box {
+  width: 567px;
+}
+
+// .mk-selsct {
+//   width: 116px;
+//   height: 37px;
+//   float: $lt;
+//   text-indent: 1em;
+//   font-size: 16px;
+//   font-family: $font-family;
+// }
+
+// .market-name {
+//   background: $link-color;
+//   color: $white;
+//   border: 1px solid $link-color;
+//   @include border-radius(5px 0 0 0);
+// }
+
+// .market-type {
+//   @include border-radius(0 5px 0 0);
+//   border: $border;
+// }

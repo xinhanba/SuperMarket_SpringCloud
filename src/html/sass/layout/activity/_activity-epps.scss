@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+.epps-bg {
+  background: #000820 url(../images/activity/epps-top.jpg) no-repeat $ct top;
+}
+
+.epps-wrap {
+  width: 1002px;
+  margin: 440px auto;
+  overflow: $hd;
+  dt, .epps-success span {
+    overflow: $hd;
+    display: $in-bl;
+    padding: 0 15px;
+    height: 46px;
+    line-height: 46px;
+    background: $title-color;
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  dd {
+    overflow: $hd;
+    margin-bottom: 32px;
+    font-size: 14px;
+    color: $epps-font-color;
+    span {
+      display: $in-bl;
+      background: $epps-block-color;
+      cursor: pointer;
+      padding: 20px 40px 55px 40px;
+      &.current {
+        color: $title-color;
+        background: $epps-block-color url(../images/activity/epps-current.png) no-repeat $ct 50px;
+      }
+    }
+  }
+}
+
+.bshare-more {
+  display: none !important;
+}
+
+.epps-btn {
+  width: 100%;
+  text-align: $ct;
+  padding-top: 80px;
+  p {
+    color: #4199d6;
+    margin-bottom: 15px;
+  }
+  a, input {
+    display: $in-bl;
+    color: $white;
+    border: none;
+    font-family: $font-family;
+    font-size: 18px;
+    cursor: pointer;
+    height: 65px;
+    line-height: 65px;
+    padding: 0 70px;
+    background: url(../images/activity/btn-bg.jpg) repeat-x;
+    &:hover {
+      @extend %opacity;
+    }
+  }
+}
+
+.epps-success-main {
+  padding: 45px 0;
+  background: $epps-block-color;
+  text-align: $ct;
+  color: $white;
+  p {
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: $hd;
+    font-size: 18px;
+    b {
+      padding: 0 8px;
+      color: $title-color;
+    }
+  }
+  em {
+    font-size: 12px;
+    display: $in-bl;
+    line-height: 1.8em;
+    color: $epps-font-color;
+    padding: 20px 80px;
+    background: #232425;
+  }
+}
+
+.fx-btn {
+  padding-top: 50px;
+  text-align: $ct;
+  a {
+    display: $in-bl;
+    width: 200px;
+    height: 55px;
+    margin: 0 25px;
+    &:hover {
+      @extend %opacity;
+    }
+    &.btn-sina {
+      background: url(../images/activity/btn-sina.jpg) no-repeat;
+    }
+    &.btn-home {
+      background: url(../images/activity/btn-home.jpg) no-repeat;
+    }
+  }
+}
+
+.epps-footer {
+  width: 100%;
+  height: 198px;
+  background: url(../images/activity/epps-footer.jpg) no-repeat $ct bottom;
+}

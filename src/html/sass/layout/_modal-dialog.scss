@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+/* 模态框样式 */
+
+.add-windows {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+// 提现地址框
+// #withdraw-wrap {
+//   top: -1000px;
+// }
+/*模态框遮盖层*/
+
+%cover {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  @include opacity(0.5);
+}
+
+.tb-overlay {
+  @extend %cover;
+  z-index: 73;
+  position: fixed;
+}
+
+.sz-zhezhao {
+  @extend %cover;
+  position: absolute;
+  z-index: 100;
+}
+
+/* 模态框*/
+
+.add-wrap {
+  @extend %border-radius, %box-sizing, %white-box;
+  width: 600px;
+  z-index: 78;
+  overflow: $hd;
+  position: absolute;
+  top: 300px;
+  left: 35%;
+  display: none;
+  &.bdzh {
+    top: 600px;
+  }
+  &.sz-jisuan {
+    left: 45%;
+  }
+  &.psfi {
+    position: fixed;
+  }
+  &.broker {
+    top: 300px;
+  }
+  &.sz-inform {
+    width: 1002px;
+    top: 150px;
+    left: 23.5%;
+    display: $bl;
+  }
+}
+
+/* 通知类弹窗标题 */
+
+.inform-title {
+  margin-bottom: 15px;
+  h2 {
+    font-size: 18px;
+    color: $link-color;
+    font-weight: normal;
+  }
+}
+
+// 图标样式
+.title-icon {
+  width: 17px;
+  height: 17px;
+  display: $in-bl;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* 弹窗标题 */
+
+.dialogs-title {
+  width: 100%;
+  background: $body-bg-color;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: $border;
+  position: relative;
+  h2 {
+    font-size: 16px;
+    text-indent: 1.5em;
+  }
+  .close-icon {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    display: $bl;
+  }
+}
+
+.dialogs-body {
+  padding: 20px;
+}
+
+/* 计算弹窗 */
+
+.trade-box1 {
+  // width: 310px;
+}
+
+.jisuan-form {
+  width: 320px;
+  border-right: 1px solid $border-color;
+}
+
+.calculate-rt {
+  float: $rt;
+  width: 230px;
+}
+
+.calculate-box {
+  display: none;
+}
+
+.calculate-wrap {
+  // width: 650px;
+  z-index: 100;
+  left: 24%;
+  // padding: 20px 10px !important;
+}
+
+.calculat-sub {
+  text-align: $ct;
+  margin-top: 20px;
+  b {
+    font-weight: normal;
+  }
+}
+
+/* 止盈止损弹窗样式 */
+
+.alert-window {
+  @extend %border-radius, %white-box;
+  position: absolute;
+  z-index: 80;
+  top: 35px;
+  left: -120%;
+  width: 350px;
+  padding: 5px 30px 20px 30px;
+  text-align: $lt;
+  .btn-sub {
+    text-align: $ct;
+    margin-top: 5px;
+  }
+}
+
+.zyzs-alert-window {
+  position: relative;
+  z-index: 51;
+}
+
+/* 对平弹窗 */
+
+.dp-alert-wrap {
+  // z-index: 85;
+  left: 24%;
+  // &.market-dp {
+  //   left: -140%;
+  // }
+}
+
+.control-form {
+  @extend %public-wrap;
+  &.bd-bt {
+    border-bottom: $border;
+  }
+  .control-box {
+    overflow: $hd;
+    margin: 10px 0;
+    &:after {
+      display: $bl;
+      height: 0;
+      zoom: 1;
+      content: "";
+      clear: both;
+    }
+    .checkbox {
+      float: $lt;
+      line-height: 35px;
+      width: 70px;
+      height: 70px;
+      .ipt {
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+    }
+    p {
+      color: $body-color;
+      float: $lt;
+      width: 280px;
+      em {
+        width: $width;
+        display: $bl;
+        line-height: 35px;
+        height: 35px;
+        .form-control {
+          width: 80px;
+          height: 25px;
+          margin: 0 5px;
+        }
+      }
+      span.error {
+        display: $bl;
+        color: $error-color !important;
+      }
+    }
+  }
+  .talk {
+    color: $font-color;
+    margin: 15px 0;
+    line-height: 1.6em;
+  }
+}
+
+/* 平仓提示框 */
+
+.price-alert {
+  @extend %alert-money;
+  width: 400px;
+  left: 105%;
+  top: -50px;
+  z-index: 74;
+  .arrow-left {
+    top: 42%;
+  }
+}
+
+.container-base {
+  .new-year {
+    display: block;
+    width: 80px;
+    height: 218px;
+    position: fixed;
+    z-index: 1;
+    top: 20%;
+    &.lt-pic {
+      background: url(../images/new-year-lt.png) no-repeat;
+      left: 3%;
+    }
+    &.rt-pic {
+      background: url(../images/new-year-rt.png) no-repeat;
+      right: 3%;
+    }
+  }
+}

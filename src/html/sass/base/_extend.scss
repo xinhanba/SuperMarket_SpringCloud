@@ -1,0 +1,201 @@
+@charset "UTF-8";
+%white-box {
+  background-color: $white;
+  border: $border;
+}
+%first-last-radius {
+  &:first-child {
+    @include border-radius(5px 0 0 0);
+    // border-right: none;
+  }
+  &:last-child {
+    @include border-radius(0 5px 0 0);
+    // border-left: none;
+  }
+}
+%transition {
+  @include transition(0.5s ease);
+}
+%input-focus-shadow {
+  border-color: #69a7d7;
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #69a7d7);
+}
+%bg-white {
+  background: $white;
+}
+%box-sizing {
+  @include box-sizing(border-box);
+}
+%border-radius {
+  @include border-radius(4px);
+}
+%border-radius-btm {
+  @include border-radius(0 0 5px 5px);
+}
+%border-radius-top {
+  @include border-radius(5px 5px 0 0);
+}
+%text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: $hd;
+}
+%public-wrap {
+  width: $width;
+}
+%font-family {
+  font-family: $font-family;
+}
+%opacity {
+  @include opacity(0.9);
+}
+%data-wrap {
+  background: $th-bg-even;
+  // border:$border;
+  //白色背景，灰色边框盒子
+}
+%box-shadow {
+  @include box-shadow(0 0 25px #e5e5e5);
+  @extend %white-box;
+}
+%input-shadow {
+  @include box-shadow(inset 1px 1px 5px #f0f0f0, 0 1px 0 #fff);
+}
+%box-shadow1 {
+  @extend %white-box;
+}
+%alert-public {
+  font-size: 13px;
+  padding: 5px;
+  text-align: $ct;
+  margin-bottom: 10px;
+  // display:none;
+  //提示框共有样式
+}
+// 登录框
+%login-box {
+  margin: 0 auto;
+  padding: 50px 40px;
+  background: $white;
+  border-top: 3px solid $link-color !important;
+  border: 1px solid $border-color;
+  @include box-shadow(0 2px 5px #e5e5e5);
+}
+%border-radius15 {
+  @include border-radius(15px);
+}
+%switch {
+  @extend %border-radius15;
+  text-align: $ct;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  padding: 1px 8px !important;
+}
+%input-submit-style {
+  box-shadow: 0;
+}
+%trade-manage-table {
+  table {
+    font-size: 13px;
+    // @extend %data-wrap;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    tbody {
+      tr: nth-child(odd) {
+        background: $white;
+      }
+      ;
+      tr:nth-child(even) {
+        background: $th-bg-even;
+      }
+    }
+    td, th {
+      text-align: $ct;
+      input {
+        width: 55px;
+        height: 20px;
+      }
+    }
+    th {
+      padding: 10px 0;
+      background: $th-title-bg;
+    }
+    td {
+      padding: 10px 0;
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+  //交易数据表格样式
+}
+// 交易面板扩展
+%wrap-width {
+  width: 405px;
+  overflow: $hd;
+  //交易面板盒子
+}
+%trade-box-public {
+  // height: 415px;
+  // overflow: $hd;
+  @extend %box-sizing;
+}
+%public-box {
+  width: 403px;
+  overflow: $hd;
+  @extend %data-wrap;
+  // padding-bottom:20px;
+  //交易面板盒子
+}
+/* 交易面板公用弹窗 */
+
+%alert-money {
+  @extend %border-radius, %box-shadow1, %box-sizing;
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.8em;
+  padding: 10px;
+  p {
+    text-align: $lt;
+  }
+}
+%trade-detail {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+// 首页表格扩展
+%index-table {
+  table {
+    text-align: $ct;
+    th, td {
+      padding: 15px 0;
+    }
+    th {
+      background: $btn-bg-color;
+      color: $white;
+      font-weight: normal;
+    }
+    tr:last-child {
+      td:first-child {
+        @include border-radius(0 0 0 5px);
+      }
+      td:last-child {
+        @include border-radius(0 0 5px 0);
+      }
+    }
+  }
+}
+%lt-menu-icon-box {
+  display: $in-bl;
+  width: 14px;
+  height: 14px;
+  float: $lt;
+}
+// %btn {
+//   @include button;
+// }

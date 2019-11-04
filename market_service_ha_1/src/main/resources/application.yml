@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-service-ha
+server:
+  port: 8761
+eureka:
+  instance:
+    # when profile=peer2, hostname=peer2
+    hostname: peer1
+  client:
+    service-url:
+      # register self to peer1
+      defaultZone: http://peer2:8762/eureka,http://peer3:8763/eureka
+info:
+  app.name: provider-8761
+  company.name: www.hyz.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

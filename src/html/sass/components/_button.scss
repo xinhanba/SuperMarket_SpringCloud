@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* 按钮基础类 */
+
+.btn {
+  @extend %button;
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    pointer-events: none;
+    background: $disabled-bg-color;
+  }
+}
+
+.btn-blue {
+  background: $btn-bg-color;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin: 0px 2px;
+}
+
+.blue-bg {
+  background: $btn-bg-color;
+}
+
+.trade-btn {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+/*提交类按钮*/
+.sub-btn {
+  background: $btn-bg-color;
+  padding: 10px 40px;
+  *padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.send-btn-box {
+  margin-top: 5px;
+}
+
+/* 发送类按钮 */
+.send-btn {
+  background: $link-color;
+  padding: 5px 12px;
+  *padding: 5px 6px;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sub-btn-return {
+  padding: 9px 40px;
+  *padding: 8px 20px;
+  color: $font-color !important;
+  background: $white;
+  border: $border !important;
+}

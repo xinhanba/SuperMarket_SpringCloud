@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+%tab {
+  @extend %clearfix;
+  display: table;
+  height: 40px;
+  a, span {
+    @extend %first-last-radius;
+    float: $lt;
+    margin-right: -1px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+    border: solid $border-color;
+    border-width: 1px 1px 0 1px;
+    color: $link-color;
+    background: $white;
+    &.reset {
+      @extend %border-radius-top;
+    }
+    &:hover, &.current {
+      color: $white;
+      background: $btn-bg-color !important;
+    }
+    &.current {
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+}
+
+/* 公共tab */
+.tab {
+  @extend %tab;
+}
+
+/*交易页面tab*/
+.tab-trade {
+  span {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 20px;
+  }
+}

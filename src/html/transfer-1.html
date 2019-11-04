@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>BTC-Q数字货币合约交易平台-BTC转账
+  </title>
+  <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+  <script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+  <!--[if lte IE 6]>
+<script src="js/ie6png.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.test, ul, img, li, input , a, div,span,em,i');
+    </script>
+<![endif]-->
+</head>
+
+<body>
+  <!-- 绑定btc100帐号 -->
+  <div class="add-windows" id="add-windows">
+    <div id="tb-overlay-bangding" class="tb-overlay display-none"></div>
+    <div class="add-wrap" id="add-wrap-bangding">
+      <div class="dialogs-title">
+        <h2 class="lt">绑定BTC100帐号</h2>
+        <a href="javascript:" class="close-icon icons-close" id="close-alert"></a>
+      </div>
+
+      <div class="dialogs-body">
+        <form action="<%=basePath%>center/transferBind.do" id="mobileform" name="mobileform" class="form-wrap" method="post">
+          <div class="form-group">
+            <label for="">
+              账户名
+            </label>
+            <input type="text" class="form-control" placeholder="请输入账户名" name="username" id="username" onblur="checkBTC100user();" />
+            <span class="error" id="errorname"></span>
+          </div>
+          <div class="form-group">
+            <label for="">
+              登录密码
+            </label>
+            <input type="password" class="form-control" placeholder="请输登录密码" name="password" id="password" onblur="checkBTC100UserPassword();" />
+            <span class="error" id="errorpwd"></span>
+          </div>
+          <div class="form-group" id="telphoneNum">
+            <label for="">
+              手机验证码
+            </label>
+            <input type="hidden" name="mobile" id="mobile" value="" />
+            <input type="text" class="form-control" placeholder="请输入手机验证码" onblur="checkCode();" id="code" name="code" />
+            <span class="error" id="error1"></span>
+            <div class="send-btn-box">
+              <input type="button" class="btn send-btn" onclick="send(1)" id="btnCode" name="btnCode" value="获取短信验证码" />
+              <input type="button" class="btn send-btn" onclick="send(2)" name="btnCodeVoice" id="btnCodeVoice" value="获取语音验证码" />
+            </div>
+          </div>
+          <div class="form-group" id="googleNum">
+            <label for="">
+              谷歌验证码
+            </label>
+            <input type="hidden" name="secrety" id="secrety" value="" />
+            <input type="text" class="form-control" placeholder="请输谷歌验证码" onblur="checkGoogle();" id="google" name="google" />
+            <span class="error" id="googleerror"></span>
+          </div>
+          <div class="form-group-btn">
+            <button type="submit" class="btn sub-btn">确认绑定</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <!-- top开始 -->
+  <div class="top-wrap">
+    <div class="top">
+      <div class="top-lt">
+        <a href="trade-index.html">
+          <span>Bitcoin指数：</span><b>$3526.21</b>
+        </a>
+      </div>
+      <ul class="top-rt">
+        <li><a href="login.html">登录</a>
+        </li>
+        <li><a href="sign-in.html">注册</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- top结束-->
+  <div class="nav-wrap">
+    <div class="nav">
+      <div class="nav-lt">
+        <a href="#" class="logo sprites-logo lt">
+        </a>
+      </div>
+      <div class="nav-rt">
+        <ul>
+          <li><a href="index.html">首页</a>
+          </li>
+          <li><a href="trade.html">BTC合约</a>
+
+          </li>
+          <li><a href="sz-trade.html">SZ合约</a>
+
+          </li>
+          <li><a href="market.html">行情图表</a>
+          </li>
+          <li><a href="user-center.html">个人中心</a>
+
+          </li>
+          <li><a href="broker.html">经纪人系统</a> </li>
+          <li><a href="news.html">自助服务</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 主体内容 -->
+  <div class="container">
+    <div class="left-menu">
+      <div class="menu-block">
+        <div class="menu-title">
+          <h3>
+                        <span class="icons-user"></span>用户中心
+                    </h3>
+        </div>
+        <ul>
+          <li>
+            <a href="user-center.html">
+              <span class="icons-safety"></span>账户安全</a>
+          </li>
+          <li>
+            <a href="vip.html">
+              <span class="icons-vip"></span>VIP积分</a>
+          </li>
+          <li>
+            <a href="trade-api.html">
+              <span class="icons-api"></span>交易API</a>
+          </li>
+
+          <li>
+            <a href="money.html">
+              <span class="icons-money"></span>资金流水</a>
+          </li>
+          <li>
+            <a href="clientele.html">
+              <span class="icons-users"></span>客户管理</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <div class="menu-title">
+          <h3>
+                        <span class="icons-money1"></span>资金管理
+                    </h3>
+        </div>
+        <ul>
+          <li>
+            <a href="recharge.html">
+              <span class="icons-recharge"></span>充值</a>
+          </li>
+          <li>
+            <a href="withdraw.html">
+              <span class="icons-withdraw"></span>提现</a>
+          </li>
+          <li>
+            <a href="transfer.html" class="current">
+              <span class="icons-transfer"></span>转账</a>
+          </li>
+          <li>
+            <a href="record.html">
+              <span class="icons-money"></span>账单明细</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-rt-box">
+      <div class="main-wrap">
+        <div class="tab">
+          <a href="transfer.html">BTC-Q转BTC-100</a>
+          <a href="transfer-1.html" class="current">BTC-100转BTC-Q</a>
+        </div>
+        <div class="box">
+          <!--提示框,成功是class是success,失败时class是warning;-->
+          <!-- <div class="success">转账成功！</div>
+<div class="warning">转账失败！</div>
+ -->
+          <div class="control">
+            <div class="transfer-account">
+              <div class="btc-q">
+                <span class="web-icon sprites-btc100"></span>
+              </div>
+              <div class="dircetion">
+                <!-- 这里需要判断，以及箭头方向，sprites-arrow-rt是默认状态，切换时变成arrow-lt,文字也随之变化 -->
+
+                <b>BTC100 转 BTC-Q</b>
+                <p class="arrow sprites-arrow-rt" id="arrow" title="BTC100 转 BTC-Q"></p>
+                <!-- <b>点击箭头切换</b> -->
+              </div>
+              <div class="btc-100">
+                <span class="web-icon sprites-btcq"></span>
+                <!-- 如果账号已经绑定，隐藏 -->
+                <!-- <p>尚未绑定账号？<a href="javascript:" id="address">去绑定</a>
+                </p> -->
+              </div>
+            </div>
+            <div class="alert">
+              <!--提示框,成功是class是success,失败时class是warning;-->
+              <div class="success">转账成功</div>
+              <div class="warning">转账失败</div>
+            </div>
+            <form action="" class="form-wrap">
+              <div class="form-group">
+                <label for="">转账数额（BTC）</label>
+                <input type="text" class="form-control" placeholder="0.01" value="0.01">
+                <span class="error">资金密码错误 <a href="">找回资金密码</a>
+                                </span>
+              </div>
+              <div class="form-group">
+                <label for="">资金密码（BTC100）</label>
+                <input type="password" class="form-control" placeholder="请输资金密码">
+                <span class="error">资金码错误，请重新输入。</span>
+              </div>
+              <div class="form-group" id="telphoneNum">
+                <label for="">
+                  手机验证码
+                </label>
+                <input type="hidden" name="mobile" id="mobile" value="" />
+                <input type="text" class="form-control" placeholder="请输入手机验证码" onblur="checkCode();" id="code" name="code" />
+                <span class="error" id="error1"></span>
+                <div class="send-btn-box">
+                  <input type="button" class="btn send-btn" onclick="send(1)" id="btnCode" name="btnCode" value="获取短信验证码" />
+                  <input type="button" class="btn send-btn" onclick="send(2)" name="btnCodeVoice" id="btnCodeVoice" value="获取语音验证码" />
+                </div>
+              </div>
+              <div class="form-group" id="googleNum">
+                <label for="">
+                  谷歌验证码
+                </label>
+                <input type="hidden" name="secrety" id="secrety" value="" />
+                <input type="text" class="form-control" placeholder="请输谷歌验证码" onblur="checkGoogle();" id="google" name="google" />
+                <span class="error" id="googleerror"></span>
+              </div>
+              <div class="form-group-btn">
+                <button type="submit" class="btn sub-btn">确认转账</button>
+                <!-- <input type="submit" value="确认转账" class="sub-btn"> -->
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="main-wrap">
+        <div class="block-title">
+          <h2 class="lt">
+                        <span></span>最近10笔转账记录</h2>
+          <a href="" class="rt">查看更多</a>
+        </div>
+        <div class="trade-manage-main">
+          <table cellpadding="0" cellspacing="0">
+            <thead>
+              <tr>
+
+                <th>订单号</th>
+                <th>转账时间</th>
+                <th>转账地址</th>
+                <th>转账金额</th>
+                <th>转账状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" bgcolor="#ffffff">
+                  暂无数据
+                </td>
+              </tr>
+              <tr>
+                <td>20140810</td>
+                <td>2014-08-10 12:55</td>
+                <td>1F7x4A3oHDgu8qmNMewYWEVZe6zDR9fAzQ</td>
+                <td>10BTC</td>
+                <td>成功</td>
+
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  $(function() {
+    // $("#add-windows").hide();
+    $("#address").click(function() {
+      $("#add-windows").show();
+    });
+    $("#close").click(function() {
+      $("#add-windows").hide();
+    });;
+  });
+  </script>
+  <div class="clear"></div>
+  <!-- 底部footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row lt">
+        <h2>关于我们</h2>
+        <ul>
+          <li><a href="#">关于我们</a>
+          </li>
+          <li><a href="#">服务协议</a>
+          </li>
+          <li><a href="#">收费规则</a>
+          </li>
+          <li><a href="#">联系我们</a>
+          </li>
+
+          <li><a href="feedback.html">投诉建议</a>
+          </li>
+        </ul>
+      </div>
+      <div class="row lt">
+        <h2>上市产品</h2>
+        <ul>
+          <li><a href="#">名词解释</a>
+          </li>
+          <li><a href="#">交易规则</a>
+          </li>
+          <li><a href="#">风险控制</a>
+          </li>
+          <li><a href="#">其它</a>
+          </li>
+        </ul>
+      </div>
+      <div class="row1 lt">
+        <h2>联系我们</h2>
+        <p><b>BTC-Q数字货币合约交易平台平台</b>
+        </p>
+        <p>地址：郑州市高新区冬青街26号电子商务产业园4#211</p>
+        <p>服务邮箱：btc-q@btc-q.com</p>
+        <p>业务合作：0371-55031576</p>
+        <p class="cont">
+          <a href="">
+            <span class="icons-wx"></span>关注微信</a>
+          <a href="">
+            <span class="icons-wb"></span>官方微博</a>
+          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=800088161&amp;site=郑州比特有限公司&amp;menu=yes" rel="nofollow" target="_blank">
+            <span class="icons-qq"></span>QQ交谈</a>
+        </p>
+      </div>
+      <div class="row2 rt">
+        <h2>风险提示</h2>
+        <p><b style="font-size:24px;color:#3079bd;">400-88-94100</b>
+        </p>
+        <p>比特币（BTC）和莱特币（LTC）都属于新型互联网数字加密币，是全天候交易，没有涨跌幅限制。加上总量有限，流通量更少，币值变化又受到全球范围内众多因素的影响，极易出现短时间单向大幅波动的情况。</p>
+        <p>
+          <em style="font-size:14px;color:#3079bd;font-weight:700;">买卖有风险，入市须谨慎！</em>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- copyright -->
+  <div class="container-bg-none">
+    <div class="copyright">
+      <p>
+        <span class="lt">版权所有: 郑州比特科技有限公司</span>
+        <span>Copyright:2013 All Rights Reserved to Zhengzhou bit Technology Co.Ltd</span>
+        <span class="rt"><a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">豫ICP备13012590号-3</a>
+                </span>
+      </p>
+    </div>
+  </div>
+  <script src="js/animate.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // $(".arrow").addClass('sprites-arrow-rt');
+    // $("#arrow").toggle(
+    //   function() {
+    //     $(".dircetion b:nth(0)").text("BTC-100 转 BTC-Q");
+    //     $(this).removeClass('sprites-arrow-rt').addClass('sprites-arrow-lt');
+
+    //   },
+    //   function() {
+    //     $(".dircetion b:nth(0)").text("BTC-Q 转 BTC-100");
+    //     $(this).removeClass('sprites-arrow-lt').addClass('sprites-arrow-rt');
+    //   });
+
+    // 点击添加地址弹窗
+    var bangding = $("#add-wrap-bangding");
+    var bdzz = $("#tb-overlay-bangding");
+    $("#address").click(function() { //点击设置提现地址链接弹窗
+      show(bangding);
+      bdzz.show();
+    });
+
+    //关闭模态框
+    $("#close-alert").click(function() {
+      hide(bangding);
+      bdzz.hide();
+    });
+  });
+  </script>
+</body>
+
+</html>

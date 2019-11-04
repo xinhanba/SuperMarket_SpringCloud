@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@mixin input {
+  @extend %border-radius,%input-shadow;
+  vertical-align: middle;
+  padding-left: 5px;
+  border: $border;
+  background-color: $white;
+  font-size: 14px;
+  &:focus {
+    @extend %transition,%input-focus-shadow;
+  }
+}
+
+%input {
+  @include input;
+}

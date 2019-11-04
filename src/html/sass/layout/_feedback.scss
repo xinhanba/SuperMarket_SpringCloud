@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/* 提交建议页面 */
+
+.fb-bg {
+  background: $body-bg-color url(../images/feedback-bg.jpg) no-repeat $ct 120px;
+}
+
+.feedback-wrap {
+  width: 1017px;
+  position: relative;
+  overflow: $hd;
+  margin: 0 auto;
+  margin-top: 145px;
+}
+
+.fb-main-top-bg {
+  padding-top: 365px;
+  height: 330px;
+  background: url(../images/feedback-main-top.png) no-repeat $ct top;
+}
+
+.fb-main-bg {
+  background: url(../images/feedback-main.png) repeat-y;
+}
+
+.fb-bg-footer {
+  height: 532px;
+  width: 100%;
+  background: url(../images/feedback-main-footer.png) no-repeat $ct bottom;
+}
+
+.fb-main {
+  padding-left: 105px;
+  padding-bottom: 35px;
+  color: $font-color;
+  h3 {
+    font-size: 18px;
+    color: $body-color;
+    margin-bottom: 30px;
+  }
+  ul {
+    border-left: 1px solid #bababa;
+    li {
+      height: 25px;
+      padding-left: 10px;
+      line-height: 25px;
+      position: relative;
+      margin-bottom: 5px;
+      &::before {
+        position: absolute;
+        top: -19px;
+        left: -7px;
+        content: ".";
+        color: #bababa;
+        font-size: 60px;
+      }
+      span {
+        margin-left: 20px;
+        padding-left: 25px;
+        color: #4c972b;
+        // background: url(../images/fb.png) no-repeat 10px $ct;
+     
+      }
+    }
+  }
+}
+
+.fb-input {
+  margin-bottom: 25px;
+  label {
+    float: $lt;
+    display: $bl;
+    width: 120px;
+    padding-right: 15px;
+    text-align: $rt;
+  }
+  select {
+    @extend %border-radius;
+    vertical-align: middle;
+    width: 150px;
+    height: 38px;
+    padding-left: 5px;
+    overflow: $hd;
+    font-size: 14px;
+    // background:transparent url(../images/select-bg.png) no-repeat;
+    border-color: $border-color;
+  }
+  textarea {
+    @extend %border-radius;
+    resize: none;
+    @include box-shadow(inset 1px 1px 5px #f0f0f0);
+    border: $border;
+    line-height: 1.6em;
+    text-indent: 5px;
+  }
+}
+
+.fb-btn {
+  padding-left: 135px;
+  a {
+    @extend %border-radius;
+    background: #237ad0;
+    color: $white;
+    padding: 8px 45px;
+  }
+}

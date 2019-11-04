@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* 左边菜单样式 */
+
+.left-menu {
+  float: $lt;
+  width: 160px;
+  overflow: $hd;
+  // @extend %data-wrap;
+  padding-bottom: 15px;
+  min-height: 395px;
+  _height: expression(this.scrollHeight > 500 ?"2000px": (this.scrollHeight < 395 ?"395px": "auto"));
+}
+.menu-block {
+  width: 100%;
+  padding-bottom: 15px;
+  overflow: $hd;
+  ul {
+    border-top: 2px solid $link-color;
+    li {
+      padding: 15px 0 15px 28px;
+      width: 100%;
+      border-bottom: 1px solid $border-color;
+      span {
+        @extend %lt-menu-icon-box;
+        margin: 4px 10px 0 10px;
+      }
+      a {
+        display: $bl;
+        color: $font-color;
+        &:hover, &.current {
+          // background-color:#dcdcdc;
+          color: $btn-bg-color;
+        }
+      }
+    }
+  }
+}
+.menu-title {
+  width: 100%;
+  color: $white;
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    height: 35px;
+    color: $btn-bg-color;
+    line-height: 35px;
+    span {
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      margin: 9px 10px 0 10px;
+      float: $lt;
+      vertical-align: middle;
+    }
+  }
+}

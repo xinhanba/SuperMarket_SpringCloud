@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* 幸运大转盘 */
+
+.hd-zhuanpan-bg {
+  background: #121432 url(../images/activity/activity-bg2.jpg) repeat-x center top;
+  padding-bottom: 200px;
+}
+
+// .activity-link-zhuanpan {
+//   position: absolute;
+//   top: 900px;
+//   left: 110px;
+//   width: 860px;
+//   overflow: $hd;
+//   padding-top: 600px;
+//   margin: 100px auto;
+//   img {
+//     width: 211px;
+//     height: 100px;
+//   }
+// }
+
+.hd-zhuanpan-box {
+  width: 1006px;
+  position: relative;
+  height: 1570px;
+  margin: 0 auto;
+}
+
+.hd-zhuanpan-main {
+  padding: 0 0 100px 0;
+}
+
+.zhuanpan-table {
+  width: 295px;
+  position: absolute;
+  top: 740px;
+  right: 60px;
+  z-index: 100;
+  text-align: $ct;
+  h3 {
+    color: #dec1ff;
+    margin-bottom: 15px;
+    b {
+      color: #f3f19d;
+      padding: 0 5px;
+    }
+  }
+  p {
+    color: #8e7db9;
+    font-size: 12px;
+    margin: 10px 0 20px 0;
+  }
+  table {
+    width: 100%;
+    border: 1px solid #6954bb;
+    color: #dec1ff;
+    th {
+      padding: 6px 0;
+      background: #6954bb;
+      font-weight: normal;
+      color: $white;
+    }
+    td {
+      padding: 7px 0;
+      border-top: 1px solid #6954bb;
+    }
+  }
+}
+
+.link-btn-cj {
+  @extend %border-radius;
+  border: 1px solid #6128c2;
+  background: #41289f;
+  padding: 8px 30px;
+  font-size: 18px;
+  &:hover {
+    @extend %opacity;
+  }
+}
+
+.rotate-content {
+  width: 552px;
+  position: absolute;
+  height: 552px;
+  left: 0;
+  top: 650px;
+  z-index: 80;
+}
+
+.rotate-con-pan {
+  background: url(../images/activity/disk.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  position: relative;
+  width: 552px;
+  height: 552px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.rotate-con-zhen {
+  width: 123px;
+  height: 552px;
+  background: url(../images/activity/start.png) no-repeat 0 155px;
+  margin: 0 auto;
+  cursor: pointer;
+}

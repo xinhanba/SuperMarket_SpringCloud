@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import "mixins/button";
+@import "mixins/form-input";
+
+@mixin alert-success {
+  color: $buy-color;
+  background: $available-bg;
+  border: 1px solid nth($alert, 1);
+}
+
+@mixin alert-warning {
+  color: $sell-color;
+  background: $not-available-bg;
+  border: 1px solid nth($alert, 2);
+}
+
+@mixin public-wrap {
+  width: $width;
+  overflow: $hd;
+}
+
+@mixin available-box {
+  background: $available-bg;
+  border: $available-border;
+}
+
+@mixin not-available-box {
+  background: $not-available-bg;
+  border: $not-available-border;
+}
+
+// @mixin box {
+//   @extend %data-wrap;
+// }
+
+@mixin switch {
+  display: inline-block;
+}

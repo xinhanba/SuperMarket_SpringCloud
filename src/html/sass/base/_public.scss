@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/* 公共样式 */
+
+body {
+  @extend %font-family;
+  font-size: 14px;
+  color: $body-color;
+  background: $body-bg-color url(../images/new-year-q.jpg) no-repeat center 200px fixed;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, form {
+  margin: 0;
+}
+
+// ul ol dl
+body, div, form, label, input, a, span, p, strong, ul, ol, li, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  // *border-collapse: collapse;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  color: $btn-bg-color;
+  &:hover {
+    color: $body-color;
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: $bl;
+    clear: both;
+    height: 0;
+  }
+}
+
+.clear {
+  zoom: 1;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+  @extend %clearfix;
+}
+
+.lt {
+  float: $lt;
+}
+
+.rt {
+  float: $rt;
+}
+
+.buy {
+  color: $buy-color;
+}
+
+.buy-bg {
+  background: $buy-color;
+}
+
+.sell {
+  color: $sell-color;
+}
+
+.sell-bg {
+  background: $sell-color;
+}
+
+.loss-all {
+  color: $loss-all-color;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.display-none {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.main-wrap {
+  @extend %public-wrap;
+  margin-bottom: 25px;
+  @extend %clearfix;
+}
+
+.container {
+  width: 1002px;
+  background: $white;
+  margin: 0 auto;
+  padding: 20px 0;
+  @extend %clearfix;
+}
+
+.container-trade {
+  width: 982px;
+  padding: 0 10px 20px 10px;
+  background: $white;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+.container-market {
+  width: 1002px;
+  background: $white;
+  margin: 0 auto;
+  padding: 10px 0;
+  @extend %clearfix;
+}
+
+.container-trade-data {
+  width: 982px;
+  background: $white;
+  margin: 0 auto;
+  padding: 30px 10px;
+  @extend %clearfix;
+}
+
+.container-bg-none {
+  width: 1002px;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+.container-row {
+  width: $width;
+  background: $white;
+  @extend %clearfix;
+}
+
+.min-height {
+  min-height: 890px;
+  _height: expression(this.scrollHeight > 5000 ?"5000px": (this.scrollHeight < 890 ?"890px": "auto"));
+}
+
+.block-title {
+  margin-bottom: 10px;
+  // padding:0 10px;
+  // overflow:$hd;
+  // border-top:3px solid $link-color!important;
+  // border:$border;
+  // border-bottom:none;
+  // background:#f1f1f1;
+  // background:-webkit-linear-gradient(360deg, #eee, #fff);
+  // background:linear-gradient(360deg, #eee, #fff);
+  height: 32px;
+  line-height: 32px;
+  h2 {
+    float: $lt;
+    font-size: 14px;
+    span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  a {
+    color: $link-color;
+    &:hover {
+      color: $a-hover;
+    }
+  }
+}

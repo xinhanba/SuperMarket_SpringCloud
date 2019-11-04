@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*客服样式*/
+
+.service-box {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  color: $font-color;
+  z-index: 120;
+}
+.service-main {
+  @extend %white-box, %box-shadow;
+  @include border-radius(5px 0 0 5px);
+  width: 140px;
+  overflow: $hd;
+  padding: 10px 15px;
+  position: absolute;
+  right: -180px;
+}
+.service-wrap {
+  position: relative;
+  width: 180px;
+}
+.kefu-icon {
+  cursor: pointer;
+  display: $in-bl;
+  width: 31px;
+  height: 31px;
+}
+.service-icon {
+  position: absolute;
+  right: 10px;
+}
+.se-block {
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  padding-bottom: 10px;
+  text-align: $rt;
+  color: #808080;
+  &:hover {
+    color: $link-color;
+  }
+  .title-icon {
+    float: $lt;
+    margin-top: 3px;
+  }
+}
+.se-list {
+  border-top: $border;
+  padding: 10px 0;
+  span {
+    display: $in-bl;
+    width: 14px;
+    height: 12px;
+    overflow: $hd;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  a {
+    color: $font-color;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}

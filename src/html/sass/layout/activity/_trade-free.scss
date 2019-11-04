@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.trade-free-body {
+  background: #262a94;
+}
+
+.trade-free-bg-item {
+  width: 100%;
+  height: 360px;
+  &.bg1 {
+    background: url(../images/activity-bg/free-bg1.jpg) no-repeat center center;
+  }
+  &.bg2 {
+    background: url(../images/activity-bg/free-bg2.jpg) no-repeat center center;
+  }
+  &.bg3 {
+    background: url(../images/activity-bg/free-bg3.jpg) no-repeat center center;
+  }
+}
+
+// 活动头部
+.trade-free-item {
+  width: 100%;
+  margin-top: 180px;
+}
+
+.trade-free-title {
+  display: $bl;
+  width: 998px;
+  height: 280px;
+  margin: 0 auto;
+  background: url(../images/free-title.png) no-repeat;
+}
+
+.trade-free-btn {
+  text-align: $ct;
+  margin: 80px 0 50px 0;
+  a {
+    display: $in-bl;
+    padding: 10px 40px;
+    font-weight: 700;
+    color: #242996;
+    font-size: 18px;
+    // background: #e1c616;
+    @include background-image(linear-gradient(bo bottom, #e1c616, #ffe220));
+    margin: 0 100px;
+    @include border-radius(30px);
+    &:hover {
+      @extend %opacity;
+    }
+  }
+}
+
+.trade-free-rules {
+  color: $white;
+  &.delay {
+    color: #fff6b4;
+    margin-top: 50px;
+  }
+  padding-left: 200px;
+  li {
+    margin-bottom: 1em;
+  }
+}

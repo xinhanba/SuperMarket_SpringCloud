@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+/* 抢红包 */
+
+.hd-hongbao-bg {
+  background: #04153a url(../images/activity/hb-bg.jpg) repeat-x $ct top;
+  padding-bottom: 100px;
+}
+
+.activity-container {
+  width: 1002px;
+  margin: 0 auto;
+}
+
+.hongbao-wrap {
+  margin-top: 115px;
+  background: url(../images/activity/hb-top-bg.png) no-repeat;
+}
+
+.hongbao-form {
+  position: relative;
+  width: 100%;
+  height: 482px;
+  form {
+    position: absolute;
+    top: 320px;
+    left: 326px;
+  }
+  .code-sedn-btn {
+    margin: 5px 0 0 110px;
+    display: $bl;
+    width: 130px;
+    height: 65px;
+  }
+  .alert {
+    display: $in-bl;
+    color: #ff9191;
+    padding: 5px 0;
+  }
+}
+
+.code-input {
+  @extend %border-radius;
+  background: #9c1619;
+  border: 1px solid #e62a51;
+  width: 348px;
+  height: 48px;
+  *line-height: 48px;
+  vertical-align: middle;
+  color: #ff6a6a;
+  text-indent: 1em;
+}
+
+.hongbao-main {
+  width: 100%;
+  background: url(../images/activity/hb-main-bg.jpg) repeat-y;
+  overflow: $hd;
+  color: #ff9191;
+  font-size: 12px;
+  border-bottom: 12px solid #ab2426;
+}
+
+.hongdong-text {
+  padding-top: 20px;
+  text-align: $ct;
+  h3 {
+    color: #e0ca7c;
+    font-size: 16px;
+    margin: 15px 0;
+  }
+  p {
+    line-height: 1.8em;
+  }
+}
+
+.hongbao-list {
+  margin-top: 25px;
+  width: 100%;
+  height: 655px;
+  position: relative;
+  background: url(../images/activity/hb-list.png) no-repeat top center;
+}
+
+.list-box {
+  position: absolute;
+  width: 240px;
+  p {
+    color: #fa7a7a;
+    text-align: $ct;
+    line-height: 1.8em;
+    b {
+      color: #ff9191;
+      a {
+        color: #ff9191;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .biaoqing {
+      display: $in-bl;
+      vertical-align: middle;
+      margin: 0 5px;
+      width: 20px;
+      height: 21px;
+      background: url(../images/activity/biaoqing.png) no-repeat;
+    }
+  }
+  ul {
+    width: 100%;
+    margin-top: 15px;
+    overflow: $hd;
+    li {
+      font-weight: 700;
+      margin: 3px 0;
+      text-align: $ct;
+      padding-left: 3%;
+      width: 46%;
+      float: $lt;
+      a {
+        color: #ff9191;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.hb-list-one {
+  top: 105px;
+  left: 175px;
+}
+
+.hb-list-two {
+  top: 85px;
+  right: 147px;
+}
+
+.hb-list-three {
+  top: 250px;
+  left: 175px;
+}
+
+.hb-list-four {
+  bottom: 0;
+  right: 147px;
+  img {
+    width: 130px;
+    height: 130px;
+    display: $bl;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+}
+
+.hongbao-wenti {
+  width: 100%;
+  height: 608px;
+  margin-top: 50px;
+  background: url(../images/activity/hb-que.png) no-repeat top center;
+}
+
+.qq-qun {
+  margin-top: 50px;
+  width: 220px;
+  height: 72px;
+  display: $bl;
+  background: url(../images/activity/qun.png) no-repeat;
+}
+
+.hongbao-go-home {
+  width: 100%;
+  padding: 60px 0;
+  text-align: $ct;
+  a {
+    font-size: 14px;
+    background: #b01f20;
+    border: 3px solid #9c1619;
+    color: #ff9393;
+    padding: 13px 60px;
+    &:hover {
+      @extend %opacity;
+    }
+  }
+}

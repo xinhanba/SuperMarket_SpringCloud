@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* 注册送积分 */
+
+$hd-title-color: #c5dcff;
+$hd-font-color: #8ba9ff;
+$hd-btn-bg: #0744ad;
+
+.hd-jifen-bg {
+  background: #073068 url(../images/activity/activity-bg.jpg) repeat-x $ct top;
+  padding-bottom: 100px;
+}
+
+.hd-jifen-block {
+  padding: 820px 0 0 60px;
+}
+
+.hd-block-lt {
+  float: $lt;
+  width: 90px;
+  font-size: 18px;
+  color: $hd-title-color;
+}
+
+.hd-block-rt {
+  float: $lt;
+  padding-left: 10px;
+  width: 800px;
+  color: $hd-font-color;
+  b {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.8em;
+  }
+}
+
+.link-btn {
+  padding: 10px 25px;
+  background: $hd-btn-bg;
+  font-size: 18px;
+}
+
+/* 注册送积分 */
+
+.chongzhi-container {
+  padding-top: 780px;
+}
+
+.hd-chongzhi-bg {
+  background: #08121e url(../images/activity/hd-cz-bg1.jpg) repeat-x center top;
+  padding-bottom: 200px;
+}
+
+.chongzhi {
+  @extend %activity-txt;
+  overflow: $hd;
+  color: #0f8b9e;
+  p {
+    margin: 30px 0;
+  }
+  b {
+    color: #1eb0c6;
+  }
+}
+
+.chongzhi-wrap {
+  width: 828px;
+  margin: 0 auto;
+  .hd-result {
+    margin-top: 60px;
+  }
+  th {
+    color: #209fc9;
+  }
+  td {
+    color: #209fc9 !important;
+    .zhichan {
+      background: #209fc9 !important;
+    }
+  }
+}
+
+.chongzhi-top {
+  width: 100%;
+  overflow: $hd;
+  height: 440px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.chongzhi-gift {
+  width: 100%;
+  overflow: $hd;
+  span {
+    display: $bl;
+    width: 351px;
+    height: 351px;
+    &.cz-gift-lt {
+      float: $lt;
+      background: url(../images/activity/gift.png) no-repeat;
+    }
+    &.cz-gift-rt {
+      float: $rt;
+      background: url(../images/activity/gift1.png) no-repeat;
+    }
+  }
+}
+
+.chongzhi-btn {
+  position: absolute;
+  top: 270px;
+  left: 320px;
+  display: $bl;
+  width: 184px;
+  height: 169px;
+  background: url(../images/activity/btn-cj.png) no-repeat;
+  &:hover {
+    @extend %opacity;
+  }
+}
+
+.get-home {
+  width: 100%;
+  text-align: $ct;
+  padding-top: 25px;
+  a {
+    display: $in-bl;
+    width: 91px;
+    height: 53px;
+    background: url(../images/activity/go_home.png) no-repeat;
+    &:hover {
+      @extend %opacity;
+    }
+  }
+}

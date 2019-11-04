@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* 首页活动焦点图 */
+.activity-silde {
+  margin-top: 10px;
+  position: relative;
+  width: 150px;
+  height: 60px;
+  overflow: $hd;
+  float: $rt;
+}
+
+.silde-box {
+  width: 100%;
+  img {
+    padding: 0 !important;
+    width: 150px !important;
+    height: 60px !important;
+  }
+}
+
+.silde-control {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  height: 10px;
+  padding-left: 45px;
+  span {
+    float: $lt;
+    margin-right: 5px;
+    @include border-radius(10px);
+    display: $in-bl;
+    width: 10px;
+    height: 10px;
+    background: $white;
+    cursor: pointer;
+    &.current {
+      background: #A0D468;
+    }
+  }
+}

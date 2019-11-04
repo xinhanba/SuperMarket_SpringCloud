@@ -1,0 +1,126 @@
+@charset "utf-8";
+/*网站input组件样式 */
+
+.form-wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+.form-control {
+  @extend %input;
+}
+.form-title {
+  @extend %clearfix;
+  margin-bottom: 30px;
+  *overflow: $hd;
+  h2 {
+    float: $lt;
+    text-align: $lt;
+  }
+  span {
+    line-height: 2em;
+    float: $lt;
+    padding-left: 30px;
+    a {
+      font-weight: 700;
+      color: $link-color;
+      &:hover {
+        color: $a-hover;
+      }
+    }
+  }
+}
+.form-group-btn {
+  width: 100%;
+  color: $white;
+  // a {
+  //   // color:$font-color;
+  //   vertical-align: middle;
+  // }
+}
+.form-group {
+  margin-bottom: 20px;
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  img {
+    width: 80px;
+    height: 42px;
+  }
+  span {
+    display: inline-block;
+    color: $font-color;
+    font-size: 12px;
+    margin-top: 5px;
+    &.error {
+      display: block;
+      color: nth($alert, 2);
+    }
+    &.correct {
+      display: block;
+      color: $buy-color;
+    }
+  }
+  a {
+    color: $body-color;
+    &:hover {
+      color: $a-hover;
+    }
+  }
+  .select {
+    padding-top: 10px;
+    select {
+      width: 90px;
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
+  a {
+    font-size: 12px;
+    color: $font-color;
+    margin-left: 10px;
+  }
+  .form-control {
+    height: 38px;
+    *line-height: 38px;
+    _width: 310px;
+    _display: $bl;
+    &[type=text], &[type=password] {
+      display: $bl;
+      width: 310px;
+    }
+    &.code {
+      float: $lt;
+      width: 100px;
+    }
+    &.checked {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+/* 上传文件 */
+
+.file {
+  width: 100%;
+  @extend %public-wrap;
+  margin-bottom: 20px;
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  span {
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+    &.error {
+      display: block;
+      color: nth($alert, 2);
+      display: none;
+    }
+  }
+  input {
+    display: block;
+    border: none;
+  }
+}

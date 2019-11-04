@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* 问卷调查 */
+
+$title-color: #296b0c;
+$epps-block-color: #1c1d1e;
+$epps-font-color: #83888e;
+
+%activity-main {
+  width: 1002px;
+  margin: 0 auto;
+  overflow: $hd;
+  position: relative;
+}
+
+/* 快捷链接 */
+.activity-link {
+  margin-top: 100px;
+  text-align: $ct;
+  img {
+    display: $in-bl;
+    width: 249px;
+    height: 100px;
+    // margin-right: 1px;
+    &:hover {
+      @extend %opacity;
+    }
+  }
+}
+
+.hd-jifen-box {
+  @extend %activity-main;
+}
+
+/*注册按钮 */
+.hd-block {
+  width: 100%;
+  overflow: $hd;
+  margin-bottom: 20px;
+  &:after {
+    content: "";
+    clear: both;
+  }
+  a {
+    display: $in-bl;
+    color: $white;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+}
+
+.activity-bg-box {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.activity-bg-item {
+  width: 100%;
+  height: 400px;
+}
+
+.activity-container-wrap {
+  width: 1002px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}

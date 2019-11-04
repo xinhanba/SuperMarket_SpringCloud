@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* 经纪人页面样式 */
+
+%help-ul {
+  font-size: 12px;
+  line-height: 1.8em;
+  // padding-left: 1em;
+  margin: 15px 0;
+  overflow: $hd;
+  color: $font-color;
+  li {
+    margin-bottom: 5px;
+    p {
+      margin: 5px 0;
+      padding-left: 1em;
+    }
+    ol {
+      margin-bottom: 0;
+      list-style: lower-roman inside;
+      ol {
+        list-style: decimal inside;
+      }
+    }
+    ul, ol {
+      padding-left: 1em;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.freedom-broker {
+  margin-bottom: 15px;
+  p {
+    font-size: 12px;
+    line-height: 1.6em;
+    margin-bottom: 25px;
+    color: $font-color;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: normal;
+    text-indent: 30px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    @extend %white-box, %border-radius;
+  }
+  h3 {
+    color: $body-color;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  ol {
+    list-style: decimal inside;
+  }
+  ol, ul {
+    @extend %help-ul;
+  }
+}
+.help-table {
+  font-size: 12px;
+  width: 70%;
+  margin: 15px 0;
+  border: $border;
+  background: $body-bg-color;
+  td {
+    padding: 5px 0 5px 15px;
+    border: $border;
+    line-height: 1.6em;
+  }
+}
+.help-text {
+  display: none;
+  @extend %white-box, %border-radius-btm;
+  padding: 15px;
+  margin-top: -1px;
+}
+span.jindu {
+  margin: 20px auto;
+  display: $bl;
+  width: 920px;
+  height: 36px;
+  // background: url(../images/jindu.png) no-repeat;
+  // &.jd-1 {
+  //   background-position: 0 0;
+  // }
+  // &.jd-2 {
+  //   background-position: 0 -78px;
+  // }
+  // &.jd-3 {
+  //   background-position: 0 -159px;
+  // }
+}
+.broker-title {
+  @extend %box-sizing;
+  max-width: 50%;
+  *width: 49%;
+  overflow: $hd;
+  float: $lt;
+  &:last-child {
+    padding-left: 20px;
+  }
+}
+.borker-block {
+  width: 44%;
+  overflow: $hd;
+  p {
+    text-indent: 2em;
+  }
+}
+.bl-lt {
+  border-right: $border;
+  padding-right: 50px;
+}
+.bl-rt {
+  padding-left: 50px;
+}
+.warning-help {
+  font-size: 13px;
+  padding: 10px;
+  background: #FFFFB9;
+  border-left: 3px solid #E4AC16;
+}
+.form-group-btn .borker-icons {
+  display: $in-bl;
+  width: 19px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}

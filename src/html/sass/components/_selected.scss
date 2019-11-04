@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* selected */
+%selecetd-public {
+  @extend %border-radius;
+  border: $border;
+  cursor: pointer;
+  color: $font-color;
+}
+
+.selected {
+  @extend %selecetd-public;
+  width: 100px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  margin-left: 12px;
+  position: relative;
+  margin-top: 5px;
+  span {
+    float: $lt;
+    padding: 0 10px;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*for Webkit browsers*/
+    color: $font-color;
+    font-size: 12px;
+    @extend %font-family;
+    background: url(../images/sl-bg.png) no-repeat right 0;
+    width: 100%;
+    height: 22px;
+    line-height: 20px;
+    border: none;
+    padding-left: 10px;
+  }
+}
+
+.sl-icon {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  width: 21px;
+  height: 22px;
+  float: $rt;
+  background: url(../images/sl-bg.png) no-repeat right top;
+}
+
+.dropdown-menu {
+  clear: both;
+  display: none;
+  @extend %border-radius;
+  background: $white;
+  width: 99%;
+  border: $border;
+  text-align: $ct;
+  a {
+    padding: 3px 0;
+    display: $bl;
+    color: $font-color;
+    &:hover {
+      background: $body-bg-color;
+      color: #5d5d5d;
+    }
+  }
+}
+
+// /* 测试
+// .ts-btn {
+//   padding-left: 10px;
+//   height: 25px;
+//   line-height: 25px;
+//   display: $in-bl;
+//   background: url(../images/bdb.gif) no-repeat 0 0;
+//   a {
+//     display: $bl;
+//     padding-right: 10px;
+//     background: url(../images/bdb.gif) no-repeat right 0;
+//   }
+// }
+
+// /*媒体查询
+// body {
+//   background-color: #f5f5f5;
+// }
+
+// @media screen and (max-width: 960px) {
+//   body {
+//     background-color: red;
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   body {
+//     background-color: orange;
+//   }
+// }
+
+// @media screen and (max-width: 550px) {
+//   body {
+//     background-color: yellow;
+//   }
+// }
+
+// @media screen and (max-width: 320px) {
+//   body {
+//     background-color: green;
+//   }
+// }

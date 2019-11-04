@@ -1,0 +1,428 @@
+@charset "UTF-8";
+
+/* 用户中心样式 */
+.add-wind {
+  display: none;
+}
+
+.info-box {
+  width: 96.1%;
+  padding: 15px;
+  overflow: $hd;
+  @extend %data-wrap;
+}
+
+%vip-jindu {
+  display: $in-bl;
+  height: 10px;
+  overflow: $hd;
+  vertical-align: middle;
+  @extend %border-radius15;
+}
+
+.vip-status {
+  display: $in-bl;
+  em {
+    color: $body-color !important;
+  }
+}
+
+.vip-icon {
+  @extend %vip-jindu;
+  position: absolute;
+  left: 0;
+  background: $link-color;
+  width: 0;
+}
+
+.vip-width {
+  @extend %vip-jindu;
+  position: relative;
+  width: 100px;
+  margin: 0 5px;
+  background: #dbdbdb;
+}
+
+.info-list {
+  overflow: $hd;
+  font-size: 14px;
+  float: $lt;
+  width: 49%;
+  li {
+    overflow: $hd;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    b, span {
+      display: $in-bl;
+    }
+    b {
+      width: 27%;
+      font-weight: normal;
+      color: $font-color;
+      text-align: $rt;
+    }
+    span {
+      color: $body-color;
+      font-size: 12px;
+      // em {
+      //   font-weight:700;
+      // }
+   
+    }
+    em {
+      color: $font-color;
+    }
+  }
+}
+
+.info-list1 {
+  width: 50%;
+  float: $lt;
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.info-hint {
+  position: relative;
+  float: $lt;
+  width: 43%;
+  font-size: 12px;
+  color: $font-color;
+  @extend %border-radius;
+  background: #f2f2f2;
+  padding: 15px 10px 15px 30px;
+  line-height: 1.8em;
+  &::before {
+    position: absolute;
+    content: "!";
+    top: 25px;
+    left: 8px;
+    color: #bebebe;
+    font-size: 40px;
+  }
+}
+
+.info-wrap {
+  overflow: $hd;
+  margin-bottom: 20px;
+}
+
+.safety-box {
+  width: $width;
+  overflow: $hd;
+  li {
+    padding: 10px 20px;
+    overflow: $hd;
+    &:nth-child(odd) {
+      background: $th-bg-even;
+    }
+    &:nth-child(even) {
+      @extend %bg-white;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .li-bg {
+      float: $lt;
+      width: 86%;
+      padding: 6px 15px;
+      overflow: $hd;
+      color: $font-color;
+      span input, span label {
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+      em {
+        float: $rt;
+        *float: none;
+        margin-left: 15px;
+        a {
+          font-size: 12px;
+          color: $link-color;
+          &:hover {
+            color: $a-hover;
+          }
+        }
+      }
+    }
+    .bg-status {
+      float: $rt;
+      text-align: $ct;
+      width: 10%;
+      padding: 6px 0;
+      em {
+        @extend %border-radius;
+        font-size: 12px;
+        padding: 3px 13px;
+        color: $white;
+        &.yes {
+          background: nth($alert, 1);
+        }
+        &.no {
+          background: nth($alert, 2);
+        }
+      }
+    }
+  }
+}
+
+.link-url {
+  @extend %public-wrap;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  b {
+    padding-right: 20px;
+    font-size: 16px;
+    color: $font-color;
+  }
+}
+
+.bg {
+  background: $link-color !important;
+  color: $white;
+  border: 1px solid $link-color !important;
+}
+
+.btc-address {
+  input {
+    float: $lt;
+    margin: 3px 0 0 15px;
+    width: 15px !important;
+    height: 15px !important;
+    vertical-align: middle;
+  }
+}
+
+/* vip积分样式 */
+
+.vip-info {
+  @extend %public-wrap;
+  p {
+    margin-bottom: 15px;
+    span {
+      margin-right: 30px;
+      b {
+        font-weight: normal;
+        color: $body-color;
+        margin-right: 5px;
+      }
+      strong {
+        font-weight: normal;
+      }
+    }
+  }
+  table {
+    font-size: 13px;
+    width: 99.99999%;
+    text-align: $ct;
+    thead tr th {
+      padding: 3px 0;
+      overflow: $hd;
+      border-left: 1px solid $border-color;
+      &:first-child {
+        border: 0;
+      }
+    }
+    tbody tr td {
+      border: $border;
+      height: 15px;
+      padding: 0;
+      .td-bg {
+        height: 100%;
+        display: block;
+        padding: 2px 0;
+        background: $a-hover;
+      }
+    }
+  }
+}
+
+.vip-img-box {
+  padding: 20px 0;
+  width: 100%;
+  .vip-icons {
+    display: $bl;
+    width: 737px;
+    height: 83px;
+    margin: 0 auto;
+  }
+}
+
+/* 经纪人状态 */
+
+.broker-status {
+  width: 19px;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: middle;
+  padding-left: 0 !important;
+  // &.no {
+  //   background-position: 0 -28px;
+  // }
+  // &.yes {
+  //   background-position: 0 0;
+  // }
+}
+
+/* 积分购买表单样式 */
+
+.buy-credits {
+  @extend %data-wrap;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  form {
+    width: 57%;
+    margin: 20px auto;
+    .input {
+      margin-bottom: 10px;
+      p {
+        margin-top: 10px;
+        b {
+          color: nth($alert, 2);
+        }
+      }
+      span b {
+        color: nth($alert, 1);
+      }
+    }
+  }
+}
+
+.box {
+  @extend %clearfix;
+  padding: 15px;
+  background: $th-bg-even;
+}
+
+.box-bg-none {
+  padding: 15px;
+  overflow: $hd;
+}
+
+.box-lt {
+  width: 75%;
+  font-size: 13px;
+  line-height: 1.6em;
+  h4 {
+    margin-bottom: 10px;
+    color: $body-color;
+    font-weight: normal;
+  }
+  p {
+    color: $font-color;
+    margin-bottom: 10px;
+    b {
+      font-size: 16px;
+    }
+    // a {
+    //   &:hover {
+    //     color: $a-hover;
+    //   }
+    // }
+ 
+  }
+}
+
+.box-rt {
+  width: 20%;
+  overflow: $hd;
+  .api-icon {
+    margin: 0 auto;
+    width: 109px;
+    height: 109px;
+    display: $bl;
+  }
+}
+
+.control {
+  @extend %public-wrap;
+  p {
+    margin-bottom: 20px;
+    span {
+      margin: 0 10px;
+    }
+    a {
+      color: $link-color;
+      &:hover {
+        color: $a-hover;
+      }
+    }
+  }
+}
+
+/* 转账页面样式 */
+
+.transfer-account {
+  width: 708px;
+  height: 160px;
+  padding-bottom: 30px;
+  position: relative;
+  margin: 15px auto;
+  overflow: $hd;
+  .dircetion {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: $ct;
+    .arrow {
+      cursor: pointer;
+      width: 326px;
+      height: 23px;
+      // &.arrow-rt {
+      //   background-position: 0 0;
+      // }
+      // &.arrow-lt {
+      //   background-position: 0 -23px;
+      // }
+   
+    }
+  }
+  .btc-q, .btc-100 {
+    position: absolute;
+    top: 15px;
+    width: 152px;
+    height: 172px;
+    text-align: $ct;
+  }
+  .btc-q {
+    left: 0;
+  }
+  .btc-100 {
+    right: 0;
+    p {
+      margin-top: 10px;
+      color: $font-color;
+      a {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+// 转账页面图标
+.web-icon {
+  width: 132px;
+  height: 132px;
+  display: $bl;
+}
+
+.block-item {
+  margin: 15px 0;
+}
+
+// 转入转出input控制
+.tran-box {
+  .form-control {
+    width: 140px !important;
+  }
+  .icons-btc {
+    position: absolute;
+    display: $in-bl;
+    width: 7px;
+    height: 14px;
+    top: 38px;
+    left: 130px;
+  }
+}

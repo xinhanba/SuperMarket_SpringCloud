@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BTC-Q最新价格</title>
+    <style>
+    body,
+    div,
+    table,
+    tr,
+    td {
+        margin: 0;
+        padding: 0;
+    }
+    .market-table {
+        width:378px;
+        border: 1px solid #f0f0f0;
+        font-size: 14px;
+    }
+    .table-title {
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 1px solid #f0f0f0;
+        text-indent: 10px;
+        color: #5f696b;
+    }
+    .tbody {
+        height: 38px;
+        line-height: 38px;
+        color: #78787a;
+    }
+    .tbody:after {
+        content: "";
+        height: 0;
+        clear: both;
+    }
+    .bdb {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .tbody span {
+        
+        float: left;
+        display:block;
+        width:33.33%;
+    }
+    .tbody span.btcq{
+    	 width: 49.9%;
+    }
+    .tbody span:first-child{
+    	text-indent: 10px;
+    }
+    .btc-color{
+    	color:#23b3d8;
+    }
+    .ltc-color{
+    	color:#b8a034;
+    }
+    .dog-color{
+    	color:#debf26;
+    }
+    .q-color{
+    	color:#2387d5;
+    }
+   
+    </style>
+</head>
+
+<body>
+    <div class="market-table">
+        <div class="table-title"><strong>BTC100现货行情</strong>
+        </div>
+        <div class="tbody bdb">
+            <span class="mr"><b class="btc-color">฿:</b>￥2450.120</span>
+            <span class="mr"><b class="ltc-color">Ł:</b>￥24.52</span>
+            <span><b class="dog-color">D:</b>￥0.00145</span>
+        </div>
+        <div class="table-title"><strong>BTC100期货行情</strong>
+        </div>
+        <div class="tbody">
+            <span class="btcq"><b class="q-color">BTC1411：</b>$415.25</span>
+            <span class="btcq"><b class="q-color">24小时成交量：</b>4161654</span>
+        </div>
+    </div>
+</body>
+
+</html>

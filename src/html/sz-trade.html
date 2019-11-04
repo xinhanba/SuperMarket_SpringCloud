@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>BTC-Q数字货币合约交易平台</title>
+  <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+  <script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+  <!--[if lte IE 6]>
+<script src="js/ie6png.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.test, ul, img, li, input , a, div,span,em,i');
+    </script>
+<![endif]-->
+  <!--[if lte IE 7]>
+ <script>
+     $(function(){
+   $(".trade-cont table .pc:eq(0)").css("z-index", "70");
+    $(".trade-cont table .pc:eq(1)").css("z-index", "69");
+    $(".trade-cont table .pc:eq(2)").css("z-index", "68");
+    $(".trade-cont table .pc:eq(3)").css("z-index", "67");
+    $(".trade-cont1 table .pc:eq(0)").css("z-index", "66");
+    $(".trade-cont1 table .pc:eq(1)").css("z-index", "65");
+    $(".trade-cont1 table .pc:eq(2)").css("z-index", "64");
+    $(".trade-cont1 table .pc:eq(3)").css("z-index", "63");
+
+    });</script>
+<![endif]-->
+</head>
+
+<body>
+  <!--  交易计算器 -->
+  <div class="add-windows">
+    <div id="tb-overlay-jisuan" class="tb-overlay display-none"></div>
+    <div class="add-wrap calculate-wrap sz-jisuan" id="jisuan-wrap">
+      <div class="dialogs-title">
+        <h2 class="lt">交易计算器</h2>
+        <a href="javascript:" class="close-icon icons-close rt close-alert"></a>
+      </div>
+      <div class="dialogs-body">
+        <form action="" class="jisuan-form lt">
+          <div class="trade-box1">
+            <div class="trade-detail"> <span>方向：</span> <em style="margin-right:30px;color:#">
+            <input type="radio" value="买多" class="ie6">
+            买多 </em> <em>
+            <input type="radio" value="卖空" class="ie6">
+            卖空 </em> </div>
+            <div class="trade-detail"> <span>杠杆倍数：</span>
+              <p class="lever-control"> <a href="javascript:" class="current">x20</a>
+              </p>
+            </div>
+            <div class="trade-detail relative"> <span>开仓数量：</span>
+              <input type="text" value="" class="form-control" />
+              <i class="sz-icons-input jisuan icons-zhang"></i> </div>
+            <div class="trade-detail relative"> <span>开仓单价：</span>
+              <input type="text" value="" class="form-control" />
+              <i class="sz-icons-input jisuan icons-dian"></i> </div>
+            <div class="trade-detail relative"> <span>涨跌幅：</span>
+              <input type="text" value="" class="form-control" />
+              <i class="sz-icons-input jisuan icons-dian"></i> </div>
+            <div class="trade-detail relative"> <span>了结价格：</span>
+              <input type="text" value="" class="form-control" />
+              <i class="sz-icons-input jisuan icons-dian"></i> </div>
+          </div>
+        </form>
+        <div class="calculate-rt">
+          <div class="trade-detail"> <span>初始保证金：</span> <b>15</b> <em>฿</em> </div>
+          <div class="trade-detail"> <span>佣金：</span> <b>0.5</b> <em>฿</em> </div>
+          <div class="trade-detail"> <span>盈亏比：</span> <b class="sell">-10</b> <em>%</em> </div>
+          <div class="trade-detail"> <span>最小波动值：</span> <b>0.1000000</b> <em>฿</em> </div>
+          <div class="trade-detail"> <span>净盈亏：</span> <b class="buy">+15</b> <em>฿</em> </div>
+        </div>
+        <div class="clear"></div>
+        <div class="calculat-sub">
+          <button type="button" class="btn sub-btn">计算</button>
+          <button type="button" class="btn sub-btn-return close-alert">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 上证合约用户交易须知 -->
+  <div class="add-windows">
+    <div id="tb-overlay-sz" class="tb-overlay"></div>
+    <div class="add-wrap calculate-wrap sz-inform" id="sz-wrap">
+
+      <div class="dialogs-body">
+        <div class="inform-title clearfix">
+          <h2 class="lt"><i class="title-icon icons-sz-info"></i>SZ合约用户交易须知</h2>
+          <!-- <a href="javascript:" class="close-icon icons-close rt close-alert"></a> -->
+        </div>
+        <div class="inform-body clearfix">
+          <p>尊敬的用户：
+            <br>您好！
+            <br>在您交易SZ合约之前，请务必对以下重要事项进行充分了解！ （后续您可以通过“自助服务——上市产品——SZ产品”了解）
+          </p>
+          <h2>一、SZ合约表</h2>
+          <table cellpadding="0" cellspacing="0" style="width: 100%;" class="help-table">
+            <tr>
+              <td width="150">
+                交易品种
+              </td>
+              <td>
+                上证指数
+              </td>
+            </tr>
+            <tr>
+              <td>
+                保证金计算
+              </td>
+              <td>
+                每点0.0001比特币
+              </td>
+            </tr>
+            <tr>
+              <td>
+                报价单位
+              </td>
+              <td>
+                指数点
+              </td>
+            </tr>
+            <tr>
+              <td>
+                最小变动价位
+              </td>
+              <td>
+                0.2指数点
+              </td>
+            </tr>
+            <tr>
+              <td>
+                交易数量
+              </td>
+              <td>
+                1的整数倍数量
+              </td>
+            </tr>
+            <tr>
+              <td>
+                涨跌停板幅度
+              </td>
+              <td>
+                上一个交易日成交均价的±5%
+              </td>
+            </tr>
+            <tr>
+              <td>
+                合约交割月份
+              </td>
+              <td>
+                当月
+              </td>
+            </tr>
+            <tr>
+              <td>
+                正常交易时间
+              </td>
+              <td>
+                周一至周五上午9:15-11:30 下午13:00-15:15（法定节假日除外）
+              </td>
+            </tr>
+            <tr>
+              <td>
+                交割日交易时间
+              </td>
+              <td>
+                上午9:15-11:30 下午13:00-15:00（法定节假日顺延）
+              </td>
+            </tr>
+            <tr>
+              <td>
+                交割时间
+              </td>
+              <td>
+                合约月份的最后一个周五下午15:00-15:15，以上证指数当天的收盘价为准进行交割。遇法定节假日或因单边市不能交割情况顺延。
+              </td>
+            </tr>
+            <tr>
+              <td>
+                最低交易保证金
+              </td>
+              <td>
+                合约价值的5%
+              </td>
+            </tr>
+            <tr>
+              <td>
+                交割方式
+              </td>
+              <td>
+                比特币
+              </td>
+            </tr>
+            <tr>
+              <td>
+                交易代码
+              </td>
+              <td>
+                SZ
+              </td>
+            </tr>
+            <tr>
+              <td>
+                手续费
+              </td>
+              <td>
+                初始0.03%，依用户VIP等级不同
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>SZ合约与BTC合约的异同</li>
+            <li>SZ合约的交易标的是上证指数，BTC合约的交易标的是比特币价格指数。</li>
+            <li>SZ合约的交易时间是法定的工作日，BTC合约的交易时间是7*24小时。</li>
+            <li>SZ合约有固定的涨跌停板限制，BTC合约的涨停板是浮动的。</li>
+            <li>SZ合约采用“余额爆仓制”，BTC合约采用“保证金爆仓制”。</li>
+            <br>
+            <li>SZ合约与现行的沪深300股指期货不同</li>
+            <li>SZ合约是利用虚拟比特币的交易，不牵扯法币兑换，不与法币挂钩。</li>
+            <li>SZ合约的设计更迷你，更有利于用户的参与体验。</li>
+            <li>SZ合约的参照标的是上证指数，不是沪深300指数。</li>
+          </ul>
+          <h2>二、交易规则</h2>
+          <ol>
+            <li> <b>合约名称及交替</b>
+              <p>SZ合约，用“SZ+交割日”的形式表示，如SZ1226代表于12月26日交割的12月份SZ合约。</p>
+              <p>老合约退市后新合约于第二交易日上午9:15分挂牌上市。</p>
+            </li>
+            <li>
+              <b>交易标的、交割</b>
+              <p>SZ合约的交易标的为上证指数。</p>
+              <p>交割是指在合约到期而用户又未提前选择平仓了结的情况下，平台将对到期的合约进行强制交割。</p>
+              <p>交割时间：合约月份的最后一个周五下午15:00-15:15，以上证指数当天的收盘价为准进行交割。遇法定节假日或因单边市不能交割情况顺延。</p>
+              <p>交割价格：以合约交割当日的上证指数收盘价为准。</p>
+            </li>
+            <li>
+              <b>合约价值、保证金收取、持仓盈亏计算</b>
+              <p>如上表所述，平台规定一个指数点价值0.0001比特币。</p>
+              <p>假定当前上证指数是3000点，那么一张合约的价值是：
+                <br>3000*0.0001=0.3BTC</p>
+              <p>假定某用户使用5%的保证金（即20倍杠杆），则需要的保证金是0.015BTC最小变动价位是0.2指数点，即盈亏变动是:
+                <br>0.2*0.0001BTC=0.00002BTC</p>
+              <p>盈亏比例变动是：0.00002/0.015=0.1333%</p>
+              <p>波动一个指数点的盈亏是：0.0001/0.015=0.6666%</p>
+              <p>波动150点用户本金翻翻。</p>
+              <p>（注：以上为方便说明，未考虑交易手续费因素的影响）
+              </p>
+
+            </li>
+            <li>
+              <b>报价</b>
+              <p>报价是指您可根据自己对市场走向的判断进行开多仓（看涨）、开空仓（看跌）的操作；相应地，您也可以自主进行平多仓、平空仓的操作。但为了遏制突发异常价格波动对市价产生的不良影响，我们对您的开仓和平仓报价作出了如下强制性规定：</p>
+              <p>（1）报价限制——防止价格短时间内大幅波动
+                <br>做多或平空时：最高可写入价为60秒前最新成交价+1%指数点
+                <br>做空或平多时：最低可写入价为60秒前最新成交价-1%指数点</p>
+              <p>（2）固定涨跌停板制度——防止合约价格短时间内过度偏离指数价格
+                <br>SZ合约每日的涨跌停板幅度为5%，涨跌基准为前一个交易日平台内的成交均价（上市首日取前一个交易日的上证指数收盘价）。</p>
+            </li>
+            <li>
+              <b>止盈止损</b>
+              <p>止盈：该功能可以使用户在价格达到一个阀值的时候，选择以某个价格“获利了结平仓”，以实现“固定盈利”的一种智能化功能。用户可以根据自己的意愿设定止盈价格，系统固定0.1%的价格差作为触发价格。</p>
+              <p>“止盈功能”举例说明： 如果某用户以3000的指数点位开多仓，那么该用户可以设定在平台内成交点位达到3150点进行平仓操作，系统固定0.1%的差值后计算出的触发价格为3146.8（3150-3.15=3146.85，取3146.8），即当站内指数点达到3150以后，系统自动挂出3146.8的平仓单，此种情况下的平仓成为“止盈”。</p>
+              <p>止损：该功能可以使用户在价格达到一个阀值的时候，选择以某个价格“认亏平仓”，以实现“控制亏损”的一种智能化功能。</p>
+              <p>“止损功能”举例说明：如果某用户以3000的指数点位开多仓，则该用户可以在其成本点位3000点之下（比如2900点）设定 “挂价2900点平仓”，系统固定0.1%的差值后计算出的触发价格为2903（2900+2.9=2902.9，取2903），即当站内成交点位达到2900以后，系统自动挂出2903点的平仓单，此种情况下的平仓成为“止损”。</p>
+              <p>需要说明的是：</p>
+              <ol>
+                <li>为了防止您的挂单价和市价偏离过大导致系统性风险，我们限定您不必填写触发价格，我们自动取您的意向挂单价格0.1%的偏离价格作为触发价格；</li>
+                <li>“止损”和“止盈”功能其中一个触发时，另一个功能失效。例如，您挂的单子“止盈”触发以后，您的单子会挂出去，此时无论该笔单子全部成交还是部分成交，系统均不再自动执行撤单操作，相应的“止损”功能失效（除非您手动撤单，再次重新设定止盈止损）；“止损”先触发时同理；</li>
+                <li>止盈和止损功能只对当前可用持仓有效；</li>
+                <li>为了降低系统风险，系统只负责挂价，不代表价格挂出后一定能成交，特别是在跳水行情发生时，所以用户应当对该功能有充分的认识，不能过度依赖该功能。</li>
+
+              </ol>
+            </li>
+            <li>
+              <b>SZ合约的爆仓</b>
+              <p>SZ合约交易采用“余额爆仓制”（与“100%保证金爆仓模式”的区别），要求用户除了保证金占用余额之外，用户的合约账号可用余额必须大于浮亏的金额，一旦用户的合约账户可用余额小于浮亏金额，平台的风控人员会立即电话联系用户自行进行追加保证金余额或者通过减仓释放余额的形式进行处理，以使账户满足可用余额大于浮亏的要求。如果因通讯不畅或无人接听等不可抗力原因造成平台未能及时联系到用户或者用户未在规定的时间内进行处理，平台风控人员有权根据市价和挂单情况对用户的单子进行部分减仓（风险相对较小时）或者全部平仓（行情波动剧烈时）的办法进行处理，以免账户风险继续扩大。</p>
+              <ol>
+                <li>
+                  <b>爆仓判断标准：持仓浮亏＞合约可用余额</b>
+                  <p>注：合约可用余额，不含持仓保证金、不含挂单保证金，指自由金额。</p>
+                </li>
+                <li>
+                  <b>风控人员联系您的唯一渠道：电话联系</b>
+                  <p>您可以自行设置是否选择电话联系，如果选择“是”，在您账户发生爆仓风险时，我们将进行电话联系；如果选择“否”，在您的账户发生爆仓风险时，我们将直接进行强平处理，不再电话联系。</p>
+                </li>
+                <li>
+                  <b>您须特别注意的事项：</b>
+                  <ol>
+                    <li>您须于收到我们电话通知的15分钟内进行处理，否则我们将进行强平处理，不再另行通知（如15分钟后因市价波动爆仓风险自行解除的情况除外）；</li>
+                    <li>在交易日上午11:10—11:30之间发生爆仓的用户，您在收到风控人员的电话通知后，须于下午13:00开盘之前自行处理，否则下午开盘后我们即进行强平处理（上午11:30收盘时因市价波动爆仓风险自行解除的情况除外）；</li>
+                    <li>在正常交易日14:45后（最后交易日14:30后）发生的爆仓，因离停盘时间较近，且存在隔夜或交割风险，我们将对爆仓账户直接进行强平处理，不再电话通知；</li>
+                    <li>无论是否已经电话通知到您，因市价波动较大而使您的合约可用余额全部亏完且保证金亏损超过50%的持仓，我们直接进行强平处理，不再另行通知。</li>
+                  </ol>
+                </li>
+                <li>
+                  <b>关于电话通知：</b>
+                  <p>出现下列情况中的任意一种，造成我们无法联系到您，视作您放弃对现有持仓的自行处理，我们将按照强平规则对您的持仓进行处理：</p>
+                  <ol>
+                    <li>电信系统线路不畅</li>
+                    <li>您的电话因所在区域无信号、欠费停机等原因导致无法接通</li>
+                    <li>您的电话关机</li>
+                    <li>电话打通后被您挂断</li>
+                    <li>电话打通响铃结束后无人接听（只打一次）</li>
+                  </ol>
+                </li>
+                <li><b>关于强制平仓及处理规则</b>
+                  <p>强制平仓是指平台风控人员按照BZ合约风险控制规则的约定，对用户的未了结持仓进行部分或全部平仓的操作。</p>
+                  <p>强制平仓的处理办法：</p>
+                  <ol>
+                    <li>保证金亏损在20%以内，我们将按照最小仓位标准对您的持仓按照市价进行强制减仓，以使您的账户脱离爆仓状态；</li>
+                    <li>保证金亏损在20%-50%之间，我们我们将按照市价平掉您的一半仓位；</li>
+                    <li>保证金亏损超过50%，我们将按照市价对您的持仓进行全部平仓处理；</li>
+                    <li>因“单边市”出现盘中不能平掉的单子盘后通过“强制减仓”处理。</li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li><b>单边市风险及处理办法</b>
+              <p>本平台所指“单边市”是指某一合约收市前30分钟内出现只有停板价格的买入（卖出）申报、没有停板价格的卖出（买入）申报，或者一有卖出（买入）申报就成交、但未打开停板价格的情形。</p>
+              <p>SZ合约交易日出现单边市（单边市的交易日称为D交易日）：
+                <br>D交易日为最后交易日的，如果是上涨单边市，涨停价低于指数交割价，则延期进行交割，直到“站内涨停价≥指数交割价”为止再行交割；
+                <br>D交易日为最后交易日的，如果是下跌单边市，跌停价高于指数交割价，则延期进行交割，直到“站内跌停价≤指数交割价”为止再行交割；
+                <br>D日为正常交易日的，则在收盘后，实施强制减仓处理办法。
+                <br>强制减仓是指在单边市交易发生当日收盘后，平台将未能在盘中通过交易实现平仓的“爆仓”用户的持仓,以当日涨跌停板价格与该合约净持仓盈利用户按照盈亏比例从高到底的顺序依次进行撮合成交。</p>
+              <p>强制减仓的方法：</p>
+              <ol>
+                <li><b>强制减仓的价格</b>
+                  <p>强制减仓的价格为该合约D交易日的涨跌停板价格。</p>
+                </li>
+                <li><b>用户须平仓爆仓单数量的确定</b>
+                  <p>单向持仓用户，对其已爆仓的持仓按照平仓数量（最小的整数数量）进行强制减仓操作后，账户脱离爆仓状态。</p>
+                  <p>双向持仓的用户，其爆仓单先与自己的反向持仓单进行撮合，如果仍未使账户脱离爆仓状态，则其净持仓部分的平仓报单参与强制减仓撮合。</p>
+                </li>
+                <li><b>参与强制减仓撮合的盈利用户平仓范围及数量的确定</b>
+                  <p>对于净持仓盈利用户（有双向持仓的扣除反向持仓计算净持仓），按照持仓盈亏比例从高到低进行排序。将需要强制减仓的爆仓单的总数量和净盈利持仓按照盈利比例从高到低的数量进行匹配，直到爆仓账户的风险全部解除为止。</p>
+                </li>
+                <li><b>强制减仓的执行</b>
+                  <p>强制减仓于D日收市后执行，强制减仓结果作为D日用户的交易结果。</p>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <p>其他未尽事宜请以平台<b>“自助服务——上市产品——SZ产品” </b>及最新网站公告为准。</p>
+          <p>此《SZ合约用户交易须知》属于《用户服务协议》的组成部分。</p>
+        </div>
+        <div class="calculat-sub">
+          <button type="button" class="btn sub-btn close-alert">同意</button>
+          <button type="button" class="btn sub-btn-return close-alert">返回</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- top开始 -->
+  <div class="top-wrap">
+    <div class="top">
+      <div class="top-lt">
+        <a href="trade-index.html"> <span>Bitcoin指数：</span><b>$3526.21</b> </a>
+      </div>
+      <ul class="top-rt">
+        <li><a href="login.html">登录</a> </li>
+        <li><a href="sign-in.html">注册</a> </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- top结束-->
+  <div class="nav-wrap">
+    <div class="nav">
+      <div class="nav-lt">
+        <a href="#" class="logo sprites-logo lt"> </a>
+      </div>
+      <div class="nav-rt">
+        <ul class="relative">
+          <li><a href="index.html">首页</a> </li>
+          <li><a href="trade.html">BTC合约</a> </li>
+          <li>
+            <a href="sz-trade.html" class="current"> <i class="newsz"></i>SZ合约</a>
+          </li>
+          <li><a href="market.html">行情图表</a> </li>
+          <li><a href="user-center.html">个人中心</a> </li>
+          <li><a href="broker.html">经纪人系统</a> </li>
+          <li><a href="news.html">自助服务</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主体内容 -->
+  <div class="container">
+    <div class="left-menu">
+      <div class="menu-block">
+        <div class="menu-title">
+          <h3> <span class="icons-trade1"> </span>交易 </h3>
+        </div>
+        <ul>
+          <li>
+            <a href="trade.html" class="current"> <span class="icons-trade-current"></span> 买卖 </a>
+          </li>
+          <li>
+            <a href="entrust.html"> <span class="icons-order"></span> 委托管理 </a>
+          </li>
+          <li>
+            <a href="trading-query.html"> <span class="icons-query"></span> 交易查询 </a>
+          </li>
+          <li>
+            <a href="trade-data.html"> <span class="icons-data"></span> 市场数据 </a>
+          </li>
+          <li>
+            <a href="order-record.html"> <span class="icons-record"></span> 结算记录 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-rt-box">
+      <!-- <div class="warning-help">
+                <p><b>公测期间我们将不定时的暂停交易以用来修复用户提交的bug <br>
+        （如公测期间 修复bug累计用时较长，我们将考虑延长活动时间）</b> </p>
+            </div>
+            <br> -->
+      <!--  -->
+      <div class="sz-item">
+        <span class="sz-span">昨日收盘：<b class="buy">3157.6点</b></span>
+        <span class="sz-span">今日最高：<b class="sell" id="todayHigh">3210点</b></span>
+        <span class="sz-span">今日最低：<b class="buy" id="todayLow">3165点</b></span>
+        <span class="sz-span">成交量：<b id="tradevols">1300</b></span>
+        <span class="sz-span">成交额：<b id="trades">415.09฿</b></span>
+        <span class="sz-span">持仓量：<b id="holdvols">1294</b></span>
+    </div>
+      <div class="main-wrap">
+        <div class="rt-wrap lt">
+          <div class="trade-rt-table">
+            <table cellspacing="0" cellpadding="0">
+              <thead>
+                <tr>
+                  <th>方向</th>
+                  <th>价格</th>
+                  <th>数量</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="sell">
+                  <td><span>卖(5)</span>
+                  </td>
+                  <td>365</td>
+                  <td>1000</td>
+                </tr>
+                <tr class="sell">
+                  <td><span>卖(4)</span>
+                  </td>
+                  <td>360</td>
+                  <td>500</td>
+                </tr>
+                <tr class="sell">
+                  <td><span>卖(3)</span>
+                  </td>
+                  <td>359</td>
+                  <td>100</td>
+                </tr>
+                <tr class="sell">
+                  <td><span>卖(2)</span>
+                  </td>
+                  <td>356</td>
+                  <td>10</td>
+                </tr>
+                <tr class="sell">
+                  <td><span>卖(1)</span>
+                  </td>
+                  <td>355</td>
+                  <td>10</td>
+                </tr>
+                <tr class="buy">
+                  <td><span>买(1)</span>
+                  </td>
+                  <td>353</td>
+                  <td>100</td>
+                </tr>
+                <tr class="buy">
+                  <td><span>买(2)</span>
+                  </td>
+                  <td>352.1</td>
+                  <td>200</td>
+                </tr>
+                <tr class="buy">
+                  <td><span>买(3)</span>
+                  </td>
+                  <td>350.1</td>
+                  <td>10</td>
+                </tr>
+                <tr class="buy">
+                  <td><span>买(4)</span>
+                  </td>
+                  <td>349</td>
+                  <td>10</td>
+                </tr>
+                <tr class="buy">
+                  <td><span>买(5)</span>
+                  </td>
+                  <td>349.5</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="trade-rt-data"> <span>最新成交价： <em>587</em> </span> <span class="zs"><a href="trade-data-index.html">Bitcoin指数： <em>6346</em></a> </span> </div>
+        </div>
+        <div class="lt-wrap rt" id="lt-wrap">
+
+          <form action="">
+            <div class="trade-title trade-tt clearfix  relative sz-index">
+              <div class="trade-title-lt lt"> <span> <strong>当前合约：</strong> </span> <a href="" class="current">SZ1214</a>
+              </div>
+              <div class="sz-hint-block rt">
+                <b class="sell" id="sz-hint">交易须知<i class="icons-hint"></i></b>
+                <div class="que-help" id="sz-hint-help">
+                  <div class="arrow-top"></div>
+                  <p>BZ合约采用 <a href="">“余额爆仓制”</a>。您在BZ合约上的可用余额（即未被持仓和挂单保 证金占用的自由金额）须大于您的持仓浮亏金额，否则视为您的账户已经“爆仓” 平台风控人员将电话联系您自行降低账户风险（您可选择减仓释放可用余额或在 规定时间内追加保证金），如您不能在规定时间内处理，平台风控人员有权对您 的持仓按照市价进行部分或全部<a href="">强平处理</a>。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="trade-main">
+              <!-- <ul class="trade-tab">
+                    <li><a href="" class="buy">买多</a>
+                    </li>
+                    <li><a href="" class="sell1">卖空</a>
+                    </li>
+                  </ul>
+                   -->
+
+              <div class="trade-box">
+                <div class="trade-detail tog-ht" style="margin-bottom:5px;">
+                  <div class="toggle-wrap"> <span class="label"> <em id="toggle-em"><i class="icons-show"></i>合约当前可用：</em> </span><b>311 ฿</b>&nbsp;&nbsp;&nbsp;&nbsp; <a href="transfer-to.html" class="a-btn" target="_blank">转入</a>
+                    <!-- <a href="activity-zhuanpan.html" style="padding-left:15px;color:#c2504f;" target="_blank"> <img src="images/activity/xiao.gif" alt=""> <strong>300</strong>次抽奖机会</a>
+ -->
+                  </div>
+                  <div class="toggle-main" id="toggle-main">
+                    <p>其中可转出：<b>111 ฿</b> <a href="transfer-out.html" class="a-btn">转出</a> </p>
+                    <p>当前可转入：<b>111 ฿</b> </p>
+
+                  </div>
+                </div>
+                <div class="trade-detail relative ie-bug"> <span class="label">杠杆倍数：</span>
+                  <p class="lever-control"> <a href="javascript:" class="current">x20</a>
+                  </p>
+                </div>
+                <div class="trade-detail relative"> <span class="label">开仓数量：</span>
+                  <input type="text" value="" class="form-control" />
+                  <i class="sz-icons-input icons-zhang"></i>
+                </div>
+                <div class="trade-detail ie-bug1 relative"> <span class="label">开仓单价：</span>
+                  <input type="text" value="" class="form-control" />
+                  <i class="sz-icons-input icons-dian"></i>
+                  <!-- 判断价格是否合理 -->
+                  <div class="alert-money display-none">
+                    <div class="arrow-top"></div>
+                    <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+                      <br> 您是否确定以 <b>7777</b> <em class="buy">买入</em> <b>12</b> ฿ </p>
+                    <div class="calculat-sub">
+                      <button type="button" class="btn sub-btn">确定</button>
+                      <button type="button" class="btn sub-btn-return" id="close">关闭</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 如果用户设置资金密码就显示，不设置就隐藏 ,默认关闭-->
+                <div class="trade-detail"> <span class="label">资金密码：</span>
+                  <input type="password" class="form-control" value="" />
+                </div>
+                <div class="trade-detail relative">
+                  <div class="lt "> <span class="label">保证金：</span><b>0.0000 ฿</b> </div>
+                  <div class="lt pdlt"> <em> <b class="icons-count"></b><a href="javascript:" id="jisuan">计算</a> </em> </div>
+                  <div class="clear"></div>
+                </div>
+                <div class="price-item clearfix sz">
+                  <span>最高可买入价为 <b class="buy">3200.5</b></span> <span>最高可卖出价为 <b class="sell">3800.5</b></span>
+                  <div class="clear"></div>
+                </div>
+                <div class="trade-btn-box clearfix">
+                  <div class="trade-btn-wrap mr5 sz">
+                    <button type="submit" value="" id="buy" class="btn trade-btn buy-bg ">买 多</button>
+                  </div>
+                  <div class="trade-btn-wrap sz">
+                    <button type="submit" value="" id="sell" class="btn trade-btn sell-bg">卖 空</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <div class="price-item clearfix sz"> <span>今日涨停价为： <b>3200.5</b></span> <span>今日跌停价为： <b>3800.5</b></span> </div>
+                <!-- 下单成功提示 -->
+                <div class="trade-alert">
+
+                  <!-- <div class="success">开仓成功！</div> -->
+                  <!-- <div class="warning">开仓失败！</div> -->
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="clear"></div>
+        </div>
+
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="container-trade">
+    <div class="main-wrap">
+      <div class="block-title-trade">
+        <div class="tab tab-trade lt" id="tab-trade"> <span class="current">持仓管理</span> <span>委托管理</span> </div>
+        <div class="trade-time">距离合约：BTC1407结算还剩：<b>15天23小时</b> </div>
+        <div class="trade-control szhy"><a href="">一键撤买</a> <a href="">一键撤卖</a> <a href="">全部撤单</a>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+      <div class="trade-manage-main table-bg">
+        <div class="trade-cont">
+          <table cellpadding="0" cellspacing="0" style="margin-bottom:25px;">
+            <thead>
+              <tr>
+                <th>类型</th>
+                <th>可用持仓</th>
+                <th>冻结</th>
+                <th>平均价</th>
+                <th>保证金</th>
+                <th> 浮动盈亏</th>
+                <th>盈亏比</th>
+                <th>佣金</th>
+                <th width="70px;">平仓价格</th>
+                <th width="70px;">平仓数量</th>
+                <th width="110px">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <form action="">
+                  <td>BTC1407 <em class="buy">多</em>x10 </td>
+                  <td>10BTC</td>
+                  <td>355</td>
+                  <td>3523.5</td>
+                  <td>5BTC</td>
+                  <td class="sell">-10</td>
+                  <td class="sell">-10%</td>
+                  <td>0.1BTC</td>
+                  <td><span class="td-child-control">
+                  <input type="text" class="form-control price-input td-input" />
+                  <div class="price-main display-none">
+                    <div class="tb-overlay"></div>
+                    <div class="price-alert">
+                      <div class="arrow-left"></div>
+                      <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+                    <br> 您是否确定以
+                    <b>7777</b> <em class="buy">买入</em><b>12</b>BTC</p>
+                    <div class="calculat-sub">
+                      <button type="button" class="btn sub-btn">确定</button>
+                      <button type="button" class="btn sub-btn-return close-price-window">关闭</button>
+                    </div>
+        </div>
+      </div>
+      </span>
+      </td>
+      <td><span class="td-child-control">
+                  <input type="text" class="form-control td-input" />
+                  </span>
+      </td>
+      <td><span class="td-child-control pc"> <a href="javascript:" class="control-btn btn pc-btn">平仓</a> <a href="javascript:" class="zszy-btn sprites-zszy-off"></a> 
+                  <!--止盈止损弹窗 -->
+                  <div class="zyzs-alert-window" id="trade-alert"> </div>
+                  <!-- 对平弹窗 --> 
+                  <!-- <div class="dp-alert-box" id="dp-alert">
+                                            </div> --> 
+                  </span>
+        <!--如果设置止损止盈 a的class为btn-open,显示开，默认是关闭状态 -->
+      </td>
+      </form>
+      </tr>
+      <tr>
+        <form action="">
+          <td>BTC1407 <em class="buy">多</em>x10 </td>
+          <td>10BTC</td>
+          <td>355</td>
+          <td>3523.5</td>
+          <td>5BTC</td>
+          <td class="sell">-10</td>
+          <td class="sell">-10%</td>
+          <td>0.1BTC</td>
+          <td><span class="td-child-control">
+                  <input type="text" class="form-control price-input td-input" />
+                  <div class="price-main display-none">
+                    <div class="tb-overlay"></div>
+                    <div class="price-alert">
+                      <div class="arrow-left"></div>
+                      <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+            <br> 您是否确定以
+            <b>7777</b> <em class="buy">买入</em><b>12</b>BTC</p>
+            <div class="calculat-sub">
+              <button type="button" class="btn sub-btn">确定</button>
+              <button type="button" class="btn sub-btn-return close-price-window">关闭</button>
+            </div>
+    </div>
+  </div>
+  </span>
+  </td>
+  <td><span class="td-child-control">
+                  <input type="text" class="form-control td-input" />
+                  </span>
+  </td>
+  <td><span class="td-child-control pc"> <a href="javascript:" class="control-btn btn pc-btn">平仓</a> 
+                  <!-- <a href="javascript:" class="control-btn btn dp-btn">对平</a> --> 
+                  <a href="javascript:" class="zszy-btn sprites-zszy-on"></a> 
+                  <!--止盈止损弹窗 -->
+                  <div class="zyzs-alert-window" id="trade-alert"> </div>
+                  <!-- 对平弹窗 --> 
+                  <!-- <div class="dp-alert-box" id="dp-alert">
+                                            </div> --> 
+                  </span>
+    <!--如果设置止损止盈 a的class为btn-open,显示开，默认是关闭状态 -->
+  </td>
+  </form>
+  </tr>
+  <tr>
+    <form action="">
+      <td>BTC1407 <em class="buy">多</em>x10 </td>
+      <td>10BTC</td>
+      <td>355</td>
+      <td>3523.5</td>
+      <td>5BTC</td>
+      <td class="sell">-10</td>
+      <td class="sell">-10%</td>
+      <td>0.1BTC</td>
+      <td><span class="td-child-control">
+                  <input type="text" class="form-control price-input td-input" />
+                  <div class="price-main display-none">
+                    <div class="tb-overlay"></div>
+                    <div class="price-alert">
+                      <div class="arrow-left"></div>
+                      <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+        <br> 您是否确定以
+        <b>7777</b> <em class="buy">买入</em><b>12</b>BTC</p>
+        <div class="calculat-sub">
+          <button type="button" class="btn sub-btn">确定</button>
+          <button type="button" class="btn sub-btn-return close-price-window">关闭</button>
+        </div>
+        </div>
+        </div>
+        </span>
+      </td>
+      <td><span class="td-child-control">
+                  <input type="text" class="form-control td-input" />
+                  </span>
+      </td>
+      <td><span class="td-child-control pc"> <a href="javascript:" class="control-btn btn pc-btn">平仓</a> 
+                  <!-- <a href="javascript:" class="control-btn btn dp-btn">对平</a> --> 
+                  <a href="javascript:" class="zszy-btn sprites-zszy-on"></a> 
+                  <!--止盈止损弹窗 -->
+                  <div class="zyzs-alert-window" id="trade-alert"> </div>
+                  <!-- 对平弹窗 --> 
+                  <!-- <div class="dp-alert-box" id="dp-alert">
+                                            </div> --> 
+                  </span>
+        <!--如果设置止损止盈 a的class为btn-open,显示开，默认是关闭状态 -->
+      </td>
+    </form>
+  </tr>
+  </tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0">
+    <thead>
+      <tr>
+        <th>类型</th>
+        <th>可用持仓</th>
+        <th>冻结</th>
+        <th>平均价</th>
+        <th>保证金</th>
+        <th> 浮动盈亏</th>
+        <th>盈亏比</th>
+        <th>佣金</th>
+        <th width="70px;">平仓价格</th>
+        <th width="70px;">平仓数量</th>
+        <th width="110px">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="margin-top:0; display:none;">
+        <td colspan="11">
+          <div class="trade-alert" style="margin-top:0; display:none;">
+            <!--提示框,成功是class是success,失败时class是warning;-->
+            <div class="success">平仓成功！</div>
+            <div class="warning">开仓失败！</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>BTC1407 <em class="buy">多</em>x10 </td>
+        <td>10BTC</td>
+        <td>355</td>
+        <td>3523.5</td>
+        <td>5BTC</td>
+        <td class="sell">-10</td>
+        <td class="sell">-10%</td>
+        <td>0.1BTC</td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control price-input td-input" />
+                <div class="price-main display-none">
+                  <div class="tb-overlay"></div>
+                  <div class="price-alert">
+                    <div class="arrow-left"></div>
+                    <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+          <br> 您是否确定以
+          <b>7777</b> <em class="buy">买入</em><b>12</b>BTC</p>
+          <div class="calculat-sub">
+            <button type="button" class="btn sub-btn">确定</button>
+            <button type="button" class="btn sub-btn-return close-price-window">关闭</button>
+          </div>
+          </div>
+          </div>
+          </span>
+        </td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control td-input" />
+                </span>
+        </td>
+        <td><span class="td-child-control pc"> <a href="javascript:" class="control-btn btn pc-btn">平仓</a> 
+                <!-- <a href="javascript:" class="control-btn btn dp-btn">对平</a> --> 
+                <a href="javascript:" class="zszy-btn sprites-zszy-on"></a> 
+                <!--止盈止损弹窗 -->
+                <div class="zyzs-alert-window" id="trade-alert"> </div>
+                <!-- 对平弹窗 --> 
+                <!-- <div class="dp-alert-box" id="dp-alert">
+                                        </div> --> 
+                
+                </span>
+          <!--如果设置止损止盈 a的class为btn-open,显示开，默认是关闭状态 -->
+        </td>
+      </tr>
+      <tr>
+        <td>BTC1407 <em class="buy">多</em>x10 </td>
+        <td>10BTC</td>
+        <td>355</td>
+        <td>3523.5</td>
+        <td>5BTC</td>
+        <td class="sell">-10</td>
+        <td class="sell">-10%</td>
+        <td>0.1BTC</td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control price-input td-input" />
+                <div class="price-main display-none">
+                  <div class="tb-overlay"></div>
+                  <div class="price-alert">
+                    <div class="arrow-left"></div>
+                    <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+          <br> 您是否确定以
+          <b>7777</b> <em class="buy">买入</em><b>12</b>BTC</p>
+          <div class="calculat-sub">
+            <button type="button" class="btn sub-btn">确定</button>
+            <button type="button" class="btn sub-btn-return close-price-window">关闭</button>
+          </div>
+          </div>
+          </div>
+          </span>
+        </td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control td-input" />
+                </span>
+        </td>
+        <td><span class="td-child-control pc"> <a href="javascript:" class="control-btn btn pc-btn">平仓</a> 
+                <!-- <a href="javascript:" class="control-btn btn dp-btn">对平</a> --> 
+                <a href="javascript:" class="zszy-btn sprites-zszy-on"></a> 
+                <!--止盈止损弹窗 -->
+                <div class="zyzs-alert-window" id="trade-alert"> </div>
+                <!-- 对平弹窗 --> 
+                <!-- <div class="dp-alert-box" id="dp-alert">
+                                        </div> --> 
+                
+                </span>
+          <!--如果设置止损止盈 a的class为btn-open,显示开，默认是关闭状态 -->
+        </td>
+      </tr>
+      <tr>
+        <td>BTC1407 <em class="buy">多</em>x10 </td>
+        <td>10BTC</td>
+        <td>355</td>
+        <td>3523.5</td>
+        <td>5BTC</td>
+        <td class="sell">-10</td>
+        <td class="sell">-10%</td>
+        <td>0.1BTC</td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control price-input td-input" />
+                <div class="price-main display-none">
+                  <div class="tb-overlay"></div>
+                  <div class="price-alert">
+                    <div class="arrow-left"></div>
+                    <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+          <br> 您是否确定以
+          <b>7777</b> <em class="buy">买入</em><b>12</b>BTC</p>
+          <div class="calculat-sub">
+            <button type="button" class="btn sub-btn">确定</button>
+            <button type="button" class="btn sub-btn-return close-price-window">关闭</button>
+          </div>
+          </div>
+          </div>
+          </span>
+        </td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control td-input" />
+                </span>
+        </td>
+        <td><span class="td-child-control pc"> <a href="javascript:" class="control-btn btn pc-btn">平仓</a> 
+                <!-- <a href="javascript:" class="control-btn btn dp-btn">对平</a> --> 
+                <a href="javascript:" class="zszy-btn sprites-zszy-on"></a> 
+                <!--止盈止损弹窗 -->
+                <div class="zyzs-alert-window" id="trade-alert"> </div>
+                <!-- 对平弹窗 --> 
+                <!-- <div class="dp-alert-box" id="dp-alert">
+                                        </div> --> 
+                
+                </span>
+          <!--如果设置止损止盈 a的class为btn-open,显示开，默认是关闭状态 -->
+        </td>
+      </tr>
+      <tr>
+        <td>BTC1407 <em class="buy">多</em>x10 </td>
+        <td>10BTC</td>
+        <td>355</td>
+        <td>3523.5</td>
+        <td>5BTC</td>
+        <td class="sell">-10</td>
+        <td class="sell">-10%</td>
+        <td>0.1BTC</td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control price-input td-input" />
+                <div class="price-main display-none">
+                  <div class="tb-overlay"></div>
+                  <div class="price-alert">
+                    <div class="arrow-left"></div>
+                    <p>您的报价不符合系统的限价规则，当前 <span>多仓最大可买入</span>价为：<b>7777</b>
+          <br> 您是否确定以
+          <b>7777</b> <em class="buy">买入</em><b>12</b>BTC</p>
+          <div class="calculat-sub">
+            <button type="button" class="btn sub-btn">确定</button>
+            <button type="button" class="btn sub-btn-return close-price-window">关闭</button>
+          </div>
+          </div>
+          </div>
+          </span>
+        </td>
+        <td><span class="td-child-control">
+                <input type="text" class="form-control td-input" />
+                </span>
+        </td>
+        <td><span class="td-child-control pc"> <a href="javascript:" class="control-btn btn pc-btn">平仓</a> 
+                <!-- <a href="javascript:" class="control-btn btn dp-btn">对平</a> --> 
+                <a href="javascript:" class="zszy-btn sprites-zszy-on"></a> 
+                <!--止盈止损弹窗 -->
+                <div class="zyzs-alert-window" id="trade-alert"> </div>
+                <!-- 对平弹窗 --> 
+                <!-- <div class="dp-alert-box" id="dp-alert">
+                                        </div> --> 
+                
+                </span>
+          <!--如果设置止损止盈 a的class为btn-open,显示开，默认是关闭状态 -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="trade-cont display-none">
+    <table cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th> 委托时间 </th>
+          <th> 合约号 </th>
+          <th> 挂单类型 </th>
+          <th> 委托价格 </th>
+          <th> 委托数量 </th>
+          <th> 已成交 </th>
+          <th> 未成交 </th>
+          <th> 保证金 </th>
+          <th> 操作 </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>07-23 09:33</td>
+          <td>BTC1407</td>
+          <td>多单开仓</td>
+          <td>4200</td>
+          <td>2BTC</td>
+          <td>0.2BTC</td>
+          <td>-5BTC</td>
+          <td>0.012BTC</td>
+          <td>成交</td>
+        </tr>
+        <tr>
+          <td>07-23 09:33</td>
+          <td>BTC1407</td>
+          <td>多单开仓</td>
+          <td>4200</td>
+          <td>2BTC</td>
+          <td>0.2BTC</td>
+          <td>-5BTC</td>
+          <td>
+            <input type="submit" value="确定" class="btn btn-blue">
+          </td>
+          <td>
+            <button type="button" class="btn btn-blue">撤单</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="clear"></div>
+  <!-- 底部footer -->
+  <div class="footer">
+    <div class="container" style="background:none;">
+      <div class="row lt">
+        <h2>关于我们</h2>
+        <ul>
+          <li><a href="#">关于我们</a> </li>
+          <li><a href="#">服务协议</a> </li>
+          <li><a href="#">收费规则</a> </li>
+          <li><a href="#">联系我们</a> </li>
+          <li><a href="feedback.html">投诉建议</a> </li>
+        </ul>
+      </div>
+      <div class="row lt">
+        <h2>上市产品</h2>
+        <ul>
+          <li><a href="#">名词解释</a> </li>
+          <li><a href="#">交易规则</a> </li>
+          <li><a href="#">风险控制</a> </li>
+          <li><a href="#">其它</a> </li>
+        </ul>
+      </div>
+      <div class="row1 lt">
+        <h2>联系我们</h2>
+        <p><b>BTC-Q数字货币合约交易平台平台</b> </p>
+        <p>地址：郑州市高新区冬青街26号电子商务产业园4#211</p>
+        <p>服务邮箱：btc-q@btc-q.com</p>
+        <p>业务合作：0371-55031576</p>
+        <p class="cont">
+          <a href=""> <span class="icons-wx"></span>关注微信</a>
+          <a href=""> <span class="icons-wb"></span>官方微博</a>
+          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=800088161&amp;site=郑州比特有限公司&amp;menu=yes" rel="nofollow" target="_blank"> <span class="icons-qq"></span>QQ交谈</a>
+        </p>
+      </div>
+      <div class="row2 rt">
+        <h2>风险提示</h2>
+        <p><b style="font-size:24px;color:#3079bd;">400-88-94100</b> </p>
+        <p>比特币（BTC）和莱特币（LTC）都属于新型互联网数字加密币，是全天候交易，没有涨跌幅限制。加上总量有限，流通量更少，币值变化又受到全球范围内众多因素的影响，极易出现短时间单向大幅波动的情况。</p>
+        <p> <em style="font-size:14px;color:#3079bd;font-weight:700;">买卖有风险，入市须谨慎！</em> </p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- copyright -->
+  <div class="container-bg-none">
+    <div class="copyright">
+      <p> <span class="lt">版权所有: 郑州比特科技有限公司</span> <span>Copyright:2013 All Rights Reserved to Zhengzhou bit Technology Co.Ltd</span> <span class="rt"><a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">豫ICP备13012590号-3</a> </span> </p>
+    </div>
+  </div>
+  <script src="js/animate.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $(function() {
+
+    // 点击计算模态框
+    var jisuan = $("#jisuan-wrap");
+    var jszz = $("#tb-overlay-jisuan");
+    $("#jisuan").on('click', function() {
+      show(jisuan);
+      jszz.show();
+    });
+
+    $(".close-alert").on('click', function() {
+      hide(jisuan);
+      jszz.hide();
+
+    });
+    // 上证合约用户交易须知
+    var szwrap = $("#sz-wrap");
+    var szzz = $("#tb-overlay-sz");
+    $(".close-alert").on('click', function() {
+      hide(szwrap);
+      szzz.hide();
+    });
+    // 交易须知提示
+    var sz_hint_block = $("#sz-hint");
+    var sz_hint_help = $("#sz-hint-help");
+    sz_hint_block.mouseover(function(event) {
+      sz_hint_help.show();
+    });
+    sz_hint_help.mouseleave(function(event) {
+      sz_hint_help.fadeOut("slow");
+    });
+
+    // 点击止盈止损追加弹窗
+    $(".zszy-btn").click(function() {
+      $(this).nextAll(".zyzs-alert-window").append('<div id="tb-overlay-zyzs" class="tb-overlay"></div><div class="alert-window"><div class="arrow-top"></div><form action=""><div class="control-form bd-bt"><div class="control-box"><div class="checkbox"><input type="checkbox" class="ipt">止盈</div><p><em>当最新成交价达到<input type="text" class="form-control"/>($)时</em><em>我将以<input type="text" class="form-control"/>($)的单价挂单进行平仓。</em><span class="error">请填写成交价</span></p></div></div><div class="control-form"><div class="control-box"><div class="checkbox"><input type="checkbox" class="ipt">止损</div><p><em>当最新成交价达到<input type="text" class="form-control"/>($)时</em><em>我将以<input type="text" class="form-control"/>($)的单价挂单进行平仓。</em><span class="error">请填写成交价</span></p></div><div class="talk">说明：止盈止损功能是为了降低系统风险，系统只负责挂价，不保证价格挂出后一定能成交。<b class="sell">（本功能只对当前可用持仓有效）</b></div></div><div class="btn-sub"><button type="button" class="btn sub-btn true">确定</button><button type="button" class="btn sub-btn-return close close-windows">关闭</button></div></form></div>');
+      $(".close-windows").click(function() {
+        $(".zyzs-alert-window").empty();
+      });
+    });
+
+    // 显示隐藏开仓待结算盈利
+
+    $("#toggle-em").toggle(
+      function() {
+        $("#toggle-main").show();
+        $("#toggle-em i").removeClass('icons-show').addClass('icons-hide');
+        $("#que-icon").hover(function() {
+          $("#que-help").show();
+        }, function() {
+          $("#que-help").fadeOut("slow");
+        });
+
+      },
+      function() {
+        $("#toggle-main").hide();
+        $("#toggle-em i").removeClass('icons-hide').addClass('icons-show');
+        //判断#toggle-main显示隐藏；
+
+      });
+
+
+    // 持仓管理tab
+    $('#tab-trade span').click(function() {
+      $(this).addClass("current").siblings().removeClass();
+      //removeClass就是删除当前其他类；只有当前对象有addClass("current")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+      $(".trade-manage-main .trade-cont").hide().eq($(this).index()).show();
+    });
+
+
+
+    // 停盘状态
+    var tingpan = $("#lt-wrap");
+    var tp = 1;
+    // 如果是停盘状态，给#lt-wrap追加停盘状态代码
+    if (tp == false) {
+      tingpan.addClass('relative').append('<div id="sz-zhezhao" class="sz-zhezhao"></div><div class="tp-block sprites-zs-tp"></div>');
+
+    };
+  });
+  </script>
+</body>
+
+</html>
