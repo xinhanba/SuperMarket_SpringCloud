@@ -24,7 +24,7 @@ public class UserController {
 
         ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client-user");
 
-        System.out.println("----" + serviceInstance.getHost() + ",=====" + serviceInstance.getPort());
+        System.out.println(serviceInstance.getServiceId() + ",----" + serviceInstance.getHost() + ",=====" + serviceInstance.getPort());
 
         String url = "http://eureka-client-user/user/getUser?email={email}&pwd={pwd}";
 

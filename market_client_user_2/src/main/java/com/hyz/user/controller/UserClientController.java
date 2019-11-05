@@ -2,6 +2,7 @@ package com.hyz.user.controller;
 
 import com.hyz.user.domain.entity.ConsumerUser;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,11 @@ public class UserClientController {
         System.out.println(str);
         ConsumerUser consumerUser = new ConsumerUser();
         consumerUser.setF_user_email(email);
+        return consumerUser;
+    }
+
+    @GetMapping(value = "/getConsumerUser")
+    public ConsumerUser getUser(@RequestBody ConsumerUser consumerUser) {
         return consumerUser;
     }
 

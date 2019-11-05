@@ -15,6 +15,7 @@
         <module>market_client_user_1</module>
         <module>market_client_user_2</module>
         <module>market_user_ribbon</module>
+        <module>market_user_feign</module>
     </modules>
 
     <parent>
