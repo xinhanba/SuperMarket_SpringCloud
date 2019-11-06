@@ -19,6 +19,15 @@ public class UserClientController {
         return consumerUser;
     }
 
+    @GetMapping(value = "/getUser2")
+    public ConsumerUser getUser2(String email, String pwd) {
+        String str = "email2:" + email + ", pwd2=" + pwd + ", 2";
+        System.out.println(str);
+        ConsumerUser consumerUser = new ConsumerUser();
+        consumerUser.setF_user_email(email);
+        return consumerUser;
+    }
+
     @GetMapping(value = "/getConsumerUser")
     public ConsumerUser getUser(@RequestBody ConsumerUser consumerUser) {
         return consumerUser;

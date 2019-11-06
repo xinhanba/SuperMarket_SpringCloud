@@ -9,3 +9,7 @@ eureka:
 spring:
   application:
     name: eureka_hystrix_user
+
+feign:
+  hystrix:
+    enabled: true
