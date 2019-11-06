@@ -12,6 +12,7 @@
         <module name="market_service_ha_2" />
         <module name="market_service_ha_3" />
         <module name="market_user_feign" />
+        <module name="market_user_hystrix" />
         <module name="market_user_ribbon" />
       </profile>
     </annotationProcessing>
