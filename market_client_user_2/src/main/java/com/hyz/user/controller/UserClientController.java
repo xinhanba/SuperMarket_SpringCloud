@@ -1,6 +1,6 @@
 package com.hyz.user.controller;
 
-import com.hyz.user.domain.entity.ConsumerUser;
+import com.hyz.market.domain.entity.ConsumerUser;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

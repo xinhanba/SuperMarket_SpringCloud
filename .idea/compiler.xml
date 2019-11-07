@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="market_client_user_1" />
         <module name="market_client_user_2" />
+        <module name="market_common_data" />
         <module name="market_service_ha_1" />
         <module name="market_service_ha_2" />
         <module name="market_service_ha_3" />
         <module name="market_user_feign" />
         <module name="market_user_hystrix" />
         <module name="market_user_ribbon" />
+        <module name="market_zuul" />
       </profile>
     </annotationProcessing>
   </component>

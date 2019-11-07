@@ -17,6 +17,8 @@
         <module>market_user_ribbon</module>
         <module>market_user_feign</module>
         <module>market_user_hystrix</module>
+        <module>market_zuul</module>
+        <module>market_common_data</module>
     </modules>
 
     <parent>

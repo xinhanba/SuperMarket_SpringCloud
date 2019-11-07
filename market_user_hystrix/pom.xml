@@ -33,6 +33,12 @@
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.hyz.shop</groupId>
+            <artifactId>market_common_data</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
 </project>

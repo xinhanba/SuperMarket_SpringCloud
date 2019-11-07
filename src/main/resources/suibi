@@ -1,0 +1,2 @@
+spring-cloud-feign处理@RequestParam和Spring mvc的不一样，Spring mvc在@RequestParam的value为空的时候反射得到参数的名字作为value
+@RequestParam的value为empty时，参数会被当作Map来处理

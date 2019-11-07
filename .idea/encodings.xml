@@ -4,11 +4,13 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_client_user_1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_client_user_2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/market_common_data" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_service_ha_1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_service_ha_2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_service_ha_3" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_user_feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_user_hystrix" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/market_user_ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/market_zuul" charset="UTF-8" />
   </component>
 </project>

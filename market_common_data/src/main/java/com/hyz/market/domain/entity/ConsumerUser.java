@@ -1,4 +1,4 @@
-package com.hyz.user.domain.entity;
+package com.hyz.market.domain.entity;
 
 import java.util.Date;
 
@@ -94,4 +94,5 @@ public class ConsumerUser {
     public void setF_user_email_status(int f_user_email_status) {
         this.f_user_email_status = f_user_email_status;
     }
+
 }

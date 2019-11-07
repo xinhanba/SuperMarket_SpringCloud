@@ -1,6 +1,6 @@
 package com.hyz.user.service.impl;
 
-import com.hyz.user.domain.entity.ConsumerUser;
+import com.hyz.market.domain.entity.ConsumerUser;
 import com.hyz.user.service.IUserFeignService;
 import org.springframework.stereotype.Component;
 

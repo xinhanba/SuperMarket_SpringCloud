@@ -1,6 +1,6 @@
 package com.hyz.user.controller;
 
-import com.hyz.user.domain.entity.ConsumerUser;
+import com.hyz.market.domain.entity.ConsumerUser;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;

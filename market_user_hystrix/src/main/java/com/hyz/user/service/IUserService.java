@@ -1,6 +1,6 @@
 package com.hyz.user.service;
 
-import com.hyz.user.domain.entity.ConsumerUser;
+import com.hyz.market.domain.entity.ConsumerUser;
 
 public interface IUserService {
 

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: zuul-server
+server:
+  port: 8077
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+zuul:
+  routes:
+    eureka-client-user:
+      path: /user/**
+      serviceId: eureka-client-user
+  sensitive-headers:

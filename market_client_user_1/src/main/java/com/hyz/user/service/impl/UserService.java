@@ -1,8 +1,8 @@
 package com.hyz.user.service.impl;
 
+import com.hyz.market.domain.entity.ConsumerUser;
 import com.hyz.user.common.MD5Service;
 import com.hyz.user.domain.dao.IUserDao;
-import com.hyz.user.domain.entity.ConsumerUser;
 import com.hyz.user.exception.ServiceException;
 import com.hyz.user.exception.code.ExceptionCode;
 import com.hyz.user.service.IUserService;

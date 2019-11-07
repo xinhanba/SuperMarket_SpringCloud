@@ -1,6 +1,6 @@
 package com.hyz.user.controller;
 
-import com.hyz.user.domain.entity.ConsumerUser;
+import com.hyz.market.domain.entity.ConsumerUser;
 import com.hyz.user.exception.ServiceException;
 import com.hyz.user.service.IUserService;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -9,7 +9,7 @@ eureka:
 spring:
   application:
     name: eureka_hystrix_user
-
+## 如果不添加此信息，fallbackfactory无法打印日志信息
 feign:
   hystrix:
     enabled: true
