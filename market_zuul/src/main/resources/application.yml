@@ -12,4 +12,5 @@ zuul:
     eureka-client-user:
       path: /user/**
       serviceId: eureka-client-user
-  sensitive-headers:
+  #什么都不设置代表不过滤任何信息
+  sensitive-headers: Cookie,Set-Cookie

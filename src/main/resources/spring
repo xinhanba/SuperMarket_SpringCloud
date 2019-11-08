@@ -1,0 +1,103 @@
+1.springMVC的工作原理
+用户请求到前端控制器，前端控制器为dispatcherServlet，前端控制器会根据请求信息，也就是URL去请求处理器映射器handleMappering，
+handlemappering根据配置或者注解方式找对应的处理器handle，找到之后返回给前端处理器执行链，
+前端处理器调用处理器适配器handleadapter执行handle
+handle执行完之后返回给处理器适配器modelandview
+处理器适配器向前端控制器返回modelandview
+前端控制器请求视图解析器viewresolver进行试图解析
+视图解析器viewresolver向前端控制器返回view
+前端控制器对视图进行渲染并返回给用户。
+2.springMVC和springboot的区别
+这两个都是spring的产物，spring最初利用生产模式DI和代理模式AOP解耦应用组件，大家觉得挺好用，于是按照这种模式搞了一个MVC模式，
+应用于web开发springMVC,然后就发现每次开发都需要写很多样本代码，为了简化工作流程，开发简洁，于是创造了springBoot，
+开发出了一个整合包starter，基于约定优于配置。
+同属于spring家族，基于spring的IOC和AOP，提供了依赖注入的容器AOP和实现面向切面的编程，然后又在二者的基础上都做了延伸产品的高级功能；
+springMVC是基于servlet的MVC模式，实现web应用开发
+springboot是基于spring4的一个整合包，囊括了大量常用的第三方库配置（jackson，mail，redis，jdbc，mongo等），对第三方库基本上零配置
+springboot实现了自动配置，降低了项目搭建的复杂度；
+springboot本身不提供spring的核心特性和扩展功能，只是用于快速而敏捷的开发新一代基于spring框架的应用程序，
+也就是说不是替代spring，而是和spring结合来提升开发体验的工具
+
+3.requestBody和requestParam的区别
+requestbody动态赋值，一般用于ajax提交json数据，constantType设置为json，后台方法用实体类对应，参数映射，进行动态赋值，这样方便些
+requestParam是取值，一般会取url？后面的参数，如果不设置默认提交也可以拿到数据
+4.jre，jdk，jvm的关系
+jre，Java运行时环境
+jdk，java开发工具包
+jvm，java虚拟机
+5.session和cookie的区别
+session存在服务器端，理论上是可以无限量的，只有服务器允许，相对安全，但是过多的话会导致服务器过卡，每个session设置有时间；
+cookie存在浏览器端，相对不安全，别人可以通过浏览器获取cookie进而cookie欺骗，一般浏览器会存20个cookie，
+每个大小为4K，如果考虑服务器性能的话是可以用cookie的
+6.hashmap的key值比较
+先用equals比较值，如果不一样，则说明不一样，如果一样再比较hashcode，如果不一样则不一样，
+如果一样则比较value值，如果一样则替换，不一样则不一样
+
+7.&和&&的区别
+&位运算符 4&5代表4的二进制和5的二进制，在进行比较
+&&逻辑运算符 常用于比较，比如 if(a && b) 如果a为false，则不用判断b，如果a为true，则需要判断b
+8.char可以存储汉字不
+可以，char本身就存两个字符，一个汉字也是俩字符，是可以存储一个汉字的
+9.a=a+b和a+=b的区别
+如果类型一致，则没啥区别，如果a和b的类型不一致，a+=b，则是强转之后在相加，a=a+b则会报错
+10.main可以私有，相当于自己的方法，但是不能和公共的main方法参数一样，那样会报错
+11.dubbo的理解
+工作原理：
+	服务容器加载启动并运行服务创建者，
+	服务创建者启动并向服务注册中心提供服务，
+	服务消费者启动并向服务注册中心订阅服务，
+	服务注册中心会将提供服务方地址给服务消费者，如果有变更，将基于长连接推送变更数据给消费者
+	服务消费者会根据软负载均衡调用一个服务方服务，如果调用失败，则选另外一个服务
+	服务消费者和服务提供者会定时发送统计数据（调用次数和调用时间）给服务监控者，服务监控者可配可不配
+理解：
+	一个注册中心，多个服务提供者多个服务消费者，服务提供方和服务消费方都注册服务到服务注册中心，
+	消费方会根据软负载均衡挑选提供方服务，当然，也可以直连，绕过注册中心
+	
+	注册中心是个网站，下载
+	服务提供者 dubbo.service registry timeout interface ref
+				dubbo.registry address id 
+				dubbo.application name
+				dubbo.portocol name port
+	服务消费者 dubbo.service id interface
+				dubbo.registry address
+				dubbo.application name
+
+	提供者，dubbo.registry id address port protocol连接注册中心配置，dubbo.application name 提供服务的名称，dubbo.protocol 服务协议 name host port
+	消费者，dubbo.registry id address port protocol连接注册中心配置，dubbo.application name 提供服务的名称
+
+1、SpringBoot是什么？
+
+   在Spring框架这个大家族中，产生了很多衍生框架，比如 Spring、SpringMvc框架等，Spring的核心内容在于控制反转(IOC)和依赖注入(DI),所谓控制反转并非是一种技术，而是一种思想，在操作方面是指在spring配置文件中创建<bean>，依赖注入即为由spring容器为应用程序的某个对象提供资源，比如 引用对象、常量数据等。
+
+   SpringBoot是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简化是指简化了Spring众多框架中所需的大量且繁琐的配置文件，所以 SpringBoot是一个服务于框架的框架，服务范围是简化配置文件。
+
+2、SpringBoot可以做什么？
+
+  最明显的特点是，让文件配置变的相当简单、让应用部署变的简单（SpringBoot内置服务器，并装备启动类代码），可以快速开启一个Web容器进行开发。
+
+3、SpringBoot工程的使用特点
+
+  （1）一个简单的SpringBoot工程是不需要在pom.xml手动添加什么配置的，如果与其他技术合用 比如postMan（文档在线自动生成、开发功能测试的一套工具）、Swagger(文档在线自动生成、开发功能测试的一套工具)，则需要在pom.xml中添加依赖，由程序自动加载依赖jar包等配置文件。
+
+  （2）我们之前在利用SSM或者SSH开发的时候，在resources中储存各种对应框架的配置文件，而现在我们只需要一个配置文件即可，配置内容也大体有 服务器端口号、数据库连接的地址、用户名、密码。这样，虽然简单 但在一定问题上而言，这也是极不安全的，将所有配置，放在一个文件里，是很危险的，但对于一般项目而言并不会有太大影响。
+
+  （3）在SpringBoot创建时会自动创建Bootdemo1Application启动类,代表着本工程项目和服务器的启动加载，在springBoot中是内含服务器的，所以不需手动配置Tomact，但注意端口号冲突问题。
+  
+  redis缓存
+  
+  行级锁表级锁页级锁
+  
+  单点服务
+  
+  http远程调用和restful远程调用
+  
+  
+springCloud包含
+	微服务本身就是多个服务之间调用，提供
+	注册中心和服务发现和注册的eureka，
+	软负载均衡ribbon，
+	集成eureka和ribbon的客户端feign，
+	防止出现某个异常引起服务雪崩，提供断路器，或者说是服务熔断hystrix
+	配置中心config 方便服务配置文件统一管理，实时更新，所以需要分布式配置中心组建
+	zuul服务网管，智能路由
+	bus 消息总线
