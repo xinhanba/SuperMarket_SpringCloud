@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="market_bus_kafka" />
+        <module name="market_bus_kafka_client" />
         <module name="market_client_user_1" />
         <module name="market_client_user_2" />
         <module name="market_common_data" />
+        <module name="market_config_client" />
+        <module name="market_config_service" />
         <module name="market_service_ha_1" />
         <module name="market_service_ha_2" />
         <module name="market_service_ha_3" />

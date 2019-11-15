@@ -19,6 +19,10 @@
         <module>market_user_hystrix</module>
         <module>market_zuul</module>
         <module>market_common_data</module>
+        <module>market_bus_kafka</module>
+        <module>market_config_service</module>
+        <module>market_config_client</module>
+        <module>market_bus_kafka_client</module>
     </modules>
 
     <parent>
@@ -46,7 +50,6 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-
     </dependencies>
 
     <dependencyManagement>
