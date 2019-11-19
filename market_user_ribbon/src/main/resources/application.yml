@@ -9,8 +9,4 @@ eureka:
     service-url:
       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
 
-##修改服务负载均衡规则为随机
-eureka-client-user:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 

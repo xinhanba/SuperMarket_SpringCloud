@@ -11,8 +11,5 @@ eureka:
     service-url:
       # register self to peer1 peer3
       defaultZone: http://peer1:8761/eureka/,http://peer3:8763/eureka/
-info:
-  app.name: provider-8762
-  company.name: www.hyz.com
-  build.artifactId: ${project.artifactId}
-  build.version: ${project.version}
+    register-with-eureka: false #false 表示不向注册中心中注册自己
+    fetch-registry: false #false 表示自己端就是注册中心,我的职责就是维护服务实例，并不需要去检索服务

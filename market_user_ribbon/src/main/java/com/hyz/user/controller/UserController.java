@@ -26,7 +26,7 @@ public class UserController {
 
         System.out.println(serviceInstance.getServiceId() + ",----" + serviceInstance.getHost() + ",=====" + serviceInstance.getPort());
 
-        String url = "http://eureka-client-user/user/getUser?email={email}&pwd={pwd}";
+        String url = "http://EUREKA-CLIENT-USER/user/getUser?email={email}&pwd={pwd}";
 
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("email", "517491659@qq.com");

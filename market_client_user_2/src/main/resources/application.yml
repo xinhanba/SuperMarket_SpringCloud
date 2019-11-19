@@ -10,15 +10,14 @@ eureka:
       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
   instance:
     prefer-ip-address: true # 优先注册IP地址而不是hostname
-    instance-id: eureka-client-user-2
-
+    instance-id: eureka-client-user-8782
 
 #配置日志
 logging:
   config: classpath:logback-spring.xml
 
 info:
-  app.name: client-8782
+  app.name: eureka-client-user-8782
   company.name: www.hyz.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
