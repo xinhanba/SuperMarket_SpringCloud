@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 //@RibbonClient(name = "EUREKA-CLIENT-USER", configuration = BeanMyselfConfig.class)
-@RibbonClients(defaultConfiguration = BeanMyselfConfig.class)
+@RibbonClients(defaultConfiguration = BeanRibbonConfig.class)
 public class UserApplication {
 
     @Bean

@@ -5,11 +5,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
-
+  instance:
+    instance-id: eureka-hystrix-user-8078
+    prefer-ip-address: true
 spring:
   application:
     name: eureka_hystrix_user
-## 如果不添加此信息，fallbackfactory无法打印日志信息
-feign:
-  hystrix:
-    enabled: true
+#在Feign负载均衡中使用Hystrix Dashboard，一定需要配置打开断路器
+#feign:
+#  hystrix:
+#    enabled: true

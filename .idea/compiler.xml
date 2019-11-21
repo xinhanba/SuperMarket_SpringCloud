@@ -13,6 +13,7 @@
         <module name="market_common_data" />
         <module name="market_config_client" />
         <module name="market_config_service" />
+        <module name="market_hystrix_dashboard" />
         <module name="market_service_ha_1" />
         <module name="market_service_ha_2" />
         <module name="market_service_ha_3" />

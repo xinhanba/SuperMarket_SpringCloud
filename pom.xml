@@ -24,6 +24,7 @@
         <module>market_config_service</module>
         <module>market_config_client</module>
         <module>market_bus_kafka_client</module>
+        <module>market_hystrix_dashboard</module>
     </modules>
 
     <properties>

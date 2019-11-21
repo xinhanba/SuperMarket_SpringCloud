@@ -13,12 +13,15 @@ public class FallBackUserClientFactory implements FallbackFactory<IUserFeignServ
     private static final Logger logger = LoggerFactory.getLogger(FallBackUserClientFactory.class);
 
     @Override
-    public IUserFeignService create(Throwable cause) {
+    public IUserFeignService create(final Throwable cause) {
+
+        FallBackUserClientFactory.logger.info("sorry, fallback3. reason was: ", cause);
+
         return new IUserFeignService() {
             @Override
             public ConsumerUser getUser(String email, String pwd) {
 
-                //FallBackUserClientFactory.logger.info("sorry, fallback3. reason was: ", cause);
+                FallBackUserClientFactory.logger.info("sorry, fallback3. reason was: ", cause);
 
                 System.out.println("进入fallBack3方法：" + email + ", " + pwd);
                 ConsumerUser user = new ConsumerUser();
@@ -29,7 +32,7 @@ public class FallBackUserClientFactory implements FallbackFactory<IUserFeignServ
 
             @Override
             public ConsumerUser getUser2(String email, String pwd) {
-                //FallBackUserClientFactory.logger.info("sorry, fallback4. reason was: ", cause);
+                FallBackUserClientFactory.logger.info("sorry, fallback4. reason was: ", cause);
                 System.out.println("进入fallBack4方法：" + email + ", " + pwd);
                 ConsumerUser user = new ConsumerUser();
                 user.setF_user_id("-1L");
